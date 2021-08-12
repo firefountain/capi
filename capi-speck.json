@@ -1,0 +1,403 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "CAPI - Central API UAb",
+    "version": "v0.0.1",
+    "description": "CAPI - Central API for UAb services\n\nAPI que permite aceder a todos os serviços conectados da UAb\n\nPara acesso há CAPI, terá de estar registo, e feito o login de modo a receber um token de verificação\n"
+  },
+  "host": "localhost:8080",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "/",
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "summary": "Register",
+        "description": "Registar um novo cliente da CAPI.\n\nTodos os campos são obrigatórios.\n\nDevolve um token que terá de ser re-enviado para todos os pedidos, a outros controladores.",
+        "operationId": "33e16dde-ba09-4ae8-bf8b-1aac1398920b",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "client_description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "password": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "active": {
+                  "type": "number"
+                },
+                "client_name": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "client_description",
+                "password",
+                "active",
+                "client_name"
+              ],
+              "x-examples": {
+                "example-1": {
+                  "client_description": "lorem ipsum lorem ipsum",
+                  "password": "1234567890",
+                  "active": 1,
+                  "client_name": "teste2"
+                }
+              }
+            },
+            "in": "body",
+            "name": "body",
+            "x-examples": {
+              "example": "{\"client_name\":\"teste2\",\"client_description\":\"lorem ipsum lorem ipsum\",\"password\":\"1234567890\",\"active\":1}"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Resposta com messagem de estado objecto user e access_token\n\nO access_token terá de ser usado para todos os restantes controladores.\n",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "client_name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "client_description": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "active": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "updated_at": {},
+                    "created_at": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "client_name",
+                    "client_description",
+                    "active",
+                    "created_at"
+                  ]
+                },
+                "access_token": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "message",
+                "user",
+                "access_token"
+              ],
+              "x-examples": {
+                "example-1": {
+                  "message": "User authenticated successfully",
+                  "user": {
+                    "id": "6",
+                    "client_name": "teste2",
+                    "client_description": "lorem ipsum lorem ipsum",
+                    "active": "1",
+                    "updated_at": null,
+                    "created_at": "2021-08-11 09:00:25"
+                  },
+                  "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6InRlc3RlMiIsImlhdCI6MTYyODcyNTA1MCwiZXhwIjoxNjI4NzI4NjUwfQ.EX36vrWCcGHb0BPybWf8bbiPeT3wSfSoDDwOmT7s3zg"
+                }
+              }
+            },
+            "examples": {
+              "example": {
+                "message": "User authenticated successfully",
+                "user": {
+                  "id": "6",
+                  "client_name": "teste2",
+                  "client_description": "lorem ipsum lorem ipsum",
+                  "active": "1",
+                  "updated_at": null,
+                  "created_at": "2021-08-11 09:00:25"
+                },
+                "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6InRlc3RlMiIsImlhdCI6MTYyODcyNTA1MCwiZXhwIjoxNjI4NzI4NjUwfQ.EX36vrWCcGHb0BPybWf8bbiPeT3wSfSoDDwOmT7s3zg"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Falta de dados para a criação de Cliente",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "client_name": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "client_name"
+              ],
+              "x-examples": {
+                "example-1": {
+                  "client_name": "The client_name field is required."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "Login",
+        "description": "",
+        "operationId": "6f2707d7-14b0-4fde-bc6d-b30ea52dded6",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\"client_name\":\"teste1\",\"password\":\"1234567890\"}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/ad": {
+      "get": {
+        "summary": "GET all Users",
+        "description": "",
+        "operationId": "a55a202d-bb62-4bdb-ac03-13f0e5e8b642",
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        },
+        "security": [
+          {
+            "oauth_2_auth": []
+          }
+        ],
+        "parameters": []
+      }
+    },
+    "/ad/": {
+      "get": {
+        "summary": "GET user by ID",
+        "description": "",
+        "operationId": "75e9c593-9a28-4da8-99c7-0f277ace1440",
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        },
+        "security": [
+          {
+            "oauth_2_auth": []
+          }
+        ],
+        "parameters": []
+      },
+      "put": {
+        "summary": "UPDATE user by ID",
+        "description": "",
+        "operationId": "07ff5bbd-af09-4d13-82ce-8c463aba363e",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\"name\":\"1\",\"email\":\"123123\"}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        },
+        "security": [
+          {
+            "oauth_2_auth": []
+          }
+        ]
+      },
+      "parameters": []
+    }
+  },
+  "securityDefinitions": {
+    "oauth_2_auth": {
+      "type": "oauth2",
+      "scopes": {}
+    }
+  },
+  "tags": [],
+  "definitions": {
+    "AD-User": {
+      "description": "Model para utilizadores de AD - Campos minimos para criação de conta na AD",
+      "type": "object",
+      "x-examples": {
+        "AD_MinUser": {
+          "user": {
+            "id": "1",
+            "name": "1",
+            "email": "2",
+            "accountExpires": "2021-08-11 09:11:00",
+            "company": "UAb",
+            "department": "DCSG",
+            "description": "lorem Ipsum",
+            "displayName": "John Doe",
+            "distinguishedName": "John Doe",
+            "employeeID": 12333,
+            "givenName": "John",
+            "initials": "JD",
+            "mail": "john.doe@uab.pt",
+            "sAMAccountName": "john.doe@uab.pt",
+            "sn": "Doe",
+            "title": "Lorem Ipsum",
+            "extensionAttribute5": "john.doe@gmail.com"
+          }
+        }
+      },
+      "properties": {
+        "user": {
+          "type": "object",
+          "required": [
+            "id",
+            "name",
+            "email",
+            "accountExpires",
+            "company",
+            "department",
+            "description",
+            "displayName",
+            "distinguishedName",
+            "employeeID",
+            "givenName",
+            "initials",
+            "mail",
+            "sAMAccountName",
+            "sn",
+            "title",
+            "extensionAttribute5"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "email": {
+              "type": "string",
+              "minLength": 1
+            },
+            "accountExpires": {
+              "type": "number"
+            },
+            "company": {
+              "type": "string",
+              "minLength": 1
+            },
+            "department": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "displayName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "distinguishedName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "employeeID": {
+              "type": "number"
+            },
+            "givenName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "initials": {
+              "type": "string",
+              "minLength": 1
+            },
+            "mail": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sAMAccountName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sn": {
+              "type": "string",
+              "minLength": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "extensionAttribute5": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      "required": [
+        "user"
+      ],
+      "title": "AD User - Min"
+    }
+  },
+  "produces": [
+    "application/json"
+  ]
+}
