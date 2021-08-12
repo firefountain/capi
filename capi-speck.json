@@ -66,7 +66,7 @@
         ],
         "responses": {
           "201": {
-            "description": "Resposta com messagem de estado objecto user e access_token\n\nO access_token terá de ser usado para todos os restantes controladores.\n",
+            "description": "Resposta com mensagem de estado, objecto user e access_token\n\nO access_token terá de ser usado para todos os restantes controladores.\n",
             "schema": {
               "description": "",
               "type": "object",
