@@ -17,11 +17,43 @@ A CAPI utiliza autenticação via JSON Web Token (JWT).
 
 JWT é um padrão aberto documentado pelo [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519 "RFC 7519"), que viabiliza a transferência de informações e garante a sua autenticidade.
 
-Um JWT é divido em três partes separadas por ponto ”.”, um header, um payload e uma signature.
+Um JWT é divido em três partes separadas por ponto ”.”, um **header**, um **payload** e uma **signature**.
 
 
-  - Header
+  - **Header**
     - Formato JSON e geralmente, contém o algoritmo de hashing utilizado na assinatura e o tipo de token (JWT)
+
+```json
+{
+  "typ": "JWT",
+  "alg": "HS256"
+}
+```
+
+  - **Payload**
+    - O payload de um JWT é também um JSON e que contém as informações relevantes ao assunto, denominadas claims, na estrutura de mapa, ou seja, chave=valor.
+```json
+{
+  "client_name": "teste1",
+  "iat": 1629906752,
+  "exp": 1629910352
+}
+```    
+  - **Signature**
+    - Signature é a terceira e última parte do JWT, para que possa ter um token, precisa-se de um Cabeçalho, Corpo, o Algoritmo definido no Cabeçalho, um secret definido pela aplicação.
+
+```json
+HMACSHA256
+  (
+  base64UrlEncode(header) +  "." + base64UrlEncode(payload),
+  your-256-bit-secret
+  ) 
+```
+ - Resultado:
+ ```json
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6InRlc3RlMSIsImlhdCI6MTYyOTkwNjc1MiwiZXhwIjoxNjI5OTEwMzUyfQ.Vskrf57VjUpEvlfLK3dMIlkAIXCcNDTIdbD3n_YOlq8
+```
+
 
 ```json http
 {
