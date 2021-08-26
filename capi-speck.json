@@ -2959,11 +2959,6 @@
             }
           }
         },
-        "security": [
-          {
-            "JWT Auth": []
-          }
-        ],
         "parameters": [
           {
             "type": "string",
@@ -2971,6 +2966,11 @@
             "name": "Content-Type",
             "description": "application/json",
             "required": true
+          }
+        ],
+        "security": [
+          {
+            "CAPI-JWT": []
           }
         ]
       },
@@ -3131,7 +3131,7 @@
         },
         "security": [
           {
-            "JWT Auth": []
+            "CAPI-JWT": []
           }
         ]
       }
