@@ -9,9 +9,6 @@ Neste momento estão disponiveis as paths para registo e login de clientes e ap�
 
 Esta API só permite aceder aos serviços após o cliente estar registado e autenticado na mesma. 
 
-### Index
-- [Autenticação](#Autenticação)
-
 ### Autenticação
 A CAPI utiliza autenticação via JSON Web Token (JWT).
 
@@ -22,14 +19,12 @@ Um JWT é divido em três partes separadas por ponto ”.”, um **header**, um 
 
   - **Header**
     - Formato JSON e geralmente, contém o algoritmo de hashing utilizado na assinatura e o tipo de token (JWT)
-
 ```json
 {
   "typ": "JWT",
   "alg": "HS256"
 }
 ```
-
   - **Payload**
     - O payload de um JWT é também um JSON e que contém as informações relevantes ao assunto, denominadas claims, na estrutura de mapa, ou seja, chave=valor.
 ```json
@@ -38,10 +33,9 @@ Um JWT é divido em três partes separadas por ponto ”.”, um **header**, um 
   "iat": 1629906752,
   "exp": 1629910352
 }
-```    
+```
   - **Signature**
     - Signature é a terceira e última parte do JWT, para que possa ter um token, precisa-se de um Cabeçalho, Corpo, o Algoritmo definido no Cabeçalho, um secret definido pela aplicação.
-
 ```json
 HMACSHA256
   (
@@ -55,22 +49,10 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6InRlc3RlMSIsImlhdCI6MTY
 ```
 
 
-```json http
-{
-  "method": "post",
-  "url": "http://capi.local:8080/auth/login",
-  "headers": {
-    "Content-Type": "application/json"
-  },
-  "body": {
-    "client_name": "teste1",
-    "password": "1234567890"
-  }
-}
-```
-
 >CONTACT
 >
 >NAME: CAPI
+>
 >URL: https://capi.uab.pt/developer/support
+>
 >Terms of service: https://capi.uab.pt/about/legal/terms/api/
