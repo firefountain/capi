@@ -2,8 +2,8 @@
   "swagger": "2.0",
   "info": {
     "title": "capi.paw",
-    "version": "v0.0.0",
-    "description": "# Description of CAPI RESTful API.\n\n![Capi Logo](http://10.4.0.59/capi/Documentation/Assets/img/capi.png \"Capi Logo\")\n\n## O que é a CAPI?\nA Central API (CAPI) é uma API da Universidade Aberta que permiter acedar a vários serviços directamente através de pedidos REST.\n\nNeste momento estão disponiveis as paths para registo e login de clientes e após autenticação CRUD para Active Directory.\n\nEsta API só permite aceder aos serviços após o cliente estar registado e autenticado na mesma. \n\n### Index\n- [Autenticação](#Autenticação)\n\n### Autenticação\nA CAPI utiliza autenticação via JWT.\n\n\n\n```json http\n{\n  \"method\": \"get\",\n  \"url\": \"https://todos.stoplight.io/todos\"\n}\n```\n\n>CONTACT\n>\n>NAME: CAPI\n>URL: https://capi.uab.pt/developer/support\n>Terms of service: https://capi.uab.pt/about/legal/terms/api/",
+    "version": "v0.0.1",
+    "description": "# Description of CAPI RESTful API.\n\n![Capi Logo](http://10.4.0.59/capi/Documentation/Assets/img/capi.png \"Capi Logo\")\n![foo](http://10.4.0.59/capi/Documentation/Assets/img/capi.png \"title\")\n\n## O que é a CAPI?\nA Central API (CAPI) é uma API da Universidade Aberta que permiter acedar a vários serviços directamente através de pedidos REST.\n\nNeste momento estão disponiveis as paths para registo e login de clientes e após autenticação CRUD para Active Directory.\n\nEsta API só permite aceder aos serviços após o cliente estar registado e autenticado na mesma. \n\n### Index\n- [Autenticação](#Autenticação)\n\n### Autenticação\nA CAPI utiliza autenticação via JWT.\n\n\n\n```json http\n{\n  \"method\": \"get\",\n  \"url\": \"https://todos.stoplight.io/todos\"\n}\n```\n\n>CONTACT\n>\n>NAME: CAPI\n>URL: https://capi.uab.pt/developer/support\n>Terms of service: https://capi.uab.pt/about/legal/terms/api/",
     "contact": {
       "name": "Nelson Carvalho",
       "email": "nelson.carvalho@uab.pt"
@@ -461,7 +461,11 @@
       "scopes": {}
     }
   },
-  "tags": [],
+  "tags": [
+    {
+      "name": "Active Directory"
+    }
+  ],
   "produces": [
     "application/json"
   ],
