@@ -28,7 +28,41 @@
             "in": "body",
             "name": "body",
             "schema": {
-              "$ref": "#/definitions/cliente"
+              "description": "",
+              "type": "object",
+              "x-examples": {
+                "example-1": {
+                  "client_name": "teste3",
+                  "client_description": "lorem ipsum lorem ipsum",
+                  "password": "1234567890",
+                  "active": 1
+                }
+              },
+              "properties": {
+                "client_name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "client_description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "password": {
+                  "type": "string",
+                  "minLength": 1,
+                  "format": "password"
+                },
+                "active": {
+                  "type": "boolean",
+                  "default": true
+                }
+              },
+              "required": [
+                "client_name",
+                "client_description",
+                "password",
+                "active"
+              ]
             },
             "description": "",
             "x-examples": {
