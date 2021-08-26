@@ -334,10 +334,2595 @@
       "get": {
         "summary": "GET all Users",
         "description": "Listar todos os utilizadores da Active Directory",
-        "operationId": "a55a202d-bb62-4bdb-ac03-13f0e5e8b642",
+        "operationId": "get-ad",
         "responses": {
-          "default": {
-            "description": "no response description was provided for this operation"
+          "200": {
+            "description": "no response description was provided for this operation",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "x-examples": {
+                "example-1": {
+                  "message": "Users retrieved successfully",
+                  "users": [
+                    {
+                      "0": "objectclass",
+                      "1": "cn",
+                      "2": "description",
+                      "3": "distinguishedname",
+                      "4": "instancetype",
+                      "5": "whencreated",
+                      "6": "whenchanged",
+                      "7": "usncreated",
+                      "8": "memberof",
+                      "9": "usnchanged",
+                      "10": "name",
+                      "11": "objectguid",
+                      "12": "useraccountcontrol",
+                      "13": "badpwdcount",
+                      "14": "codepage",
+                      "15": "countrycode",
+                      "16": "badpasswordtime",
+                      "17": "lastlogoff",
+                      "18": "lastlogon",
+                      "19": "logonhours",
+                      "20": "pwdlastset",
+                      "21": "primarygroupid",
+                      "22": "objectsid",
+                      "23": "admincount",
+                      "24": "accountexpires",
+                      "25": "logoncount",
+                      "26": "samaccountname",
+                      "27": "samaccounttype",
+                      "28": "objectcategory",
+                      "29": "iscriticalsystemobject",
+                      "30": "dscorepropagationdata",
+                      "objectclass": [
+                        "top",
+                        "person",
+                        "organizationalPerson",
+                        "user"
+                      ],
+                      "cn": [
+                        "Administrator"
+                      ],
+                      "description": [
+                        "Built-in account for administering the computer/domain"
+                      ],
+                      "distinguishedname": [
+                        "CN=Administrator,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "instancetype": [
+                        "4"
+                      ],
+                      "whencreated": [
+                        "20210820112157.0Z"
+                      ],
+                      "whenchanged": [
+                        "20210820114313.0Z"
+                      ],
+                      "usncreated": [
+                        "8196"
+                      ],
+                      "memberof": [
+                        "CN=Group Policy Creator Owners,CN=Users,DC=uplift,DC=local",
+                        "CN=Domain Admins,CN=Users,DC=uplift,DC=local",
+                        "CN=Enterprise Admins,CN=Users,DC=uplift,DC=local",
+                        "CN=Schema Admins,CN=Users,DC=uplift,DC=local",
+                        "CN=Administrators,CN=Builtin,DC=uplift,DC=local"
+                      ],
+                      "usnchanged": [
+                        "13027"
+                      ],
+                      "name": [
+                        "Administrator"
+                      ],
+                      "objectguid": "46b559e8-95e4-433d-8a6b-fe5bab219ba4",
+                      "useraccountcontrol": [
+                        "512"
+                      ],
+                      "badpwdcount": [
+                        "0"
+                      ],
+                      "codepage": [
+                        "0"
+                      ],
+                      "countrycode": [
+                        "0"
+                      ],
+                      "badpasswordtime": [
+                        "0"
+                      ],
+                      "lastlogoff": [
+                        "0"
+                      ],
+                      "lastlogon": [
+                        "132739316489463231"
+                      ],
+                      "logonhours": [
+                        "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ"
+                      ],
+                      "pwdlastset": [
+                        "132739319918915024"
+                      ],
+                      "primarygroupid": [
+                        "513"
+                      ],
+                      "objectsid": "S-1-5-21-3543265425-1345166158-814452509-500",
+                      "admincount": [
+                        "1"
+                      ],
+                      "accountexpires": [
+                        "0"
+                      ],
+                      "logoncount": [
+                        "2"
+                      ],
+                      "samaccountname": [
+                        "Administrator"
+                      ],
+                      "samaccounttype": [
+                        "805306368"
+                      ],
+                      "objectcategory": [
+                        "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                      ],
+                      "iscriticalsystemobject": [
+                        "TRUE"
+                      ],
+                      "dscorepropagationdata": [
+                        "20210820114313.0Z",
+                        "20210820114313.0Z",
+                        "20210820012802.0Z",
+                        "16010101181216.0Z"
+                      ]
+                    },
+                    {
+                      "0": "objectclass",
+                      "1": "cn",
+                      "2": "description",
+                      "3": "distinguishedname",
+                      "4": "instancetype",
+                      "5": "whencreated",
+                      "6": "whenchanged",
+                      "7": "displayname",
+                      "8": "usncreated",
+                      "9": "memberof",
+                      "10": "usnchanged",
+                      "11": "name",
+                      "12": "objectguid",
+                      "13": "useraccountcontrol",
+                      "14": "badpwdcount",
+                      "15": "codepage",
+                      "16": "countrycode",
+                      "17": "badpasswordtime",
+                      "18": "lastlogoff",
+                      "19": "lastlogon",
+                      "20": "pwdlastset",
+                      "21": "primarygroupid",
+                      "22": "objectsid",
+                      "23": "accountexpires",
+                      "24": "logoncount",
+                      "25": "samaccountname",
+                      "26": "samaccounttype",
+                      "27": "objectcategory",
+                      "28": "iscriticalsystemobject",
+                      "29": "dscorepropagationdata",
+                      "objectclass": [
+                        "top",
+                        "person",
+                        "organizationalPerson",
+                        "user"
+                      ],
+                      "cn": [
+                        "Guest"
+                      ],
+                      "description": [
+                        "Built-in account for guest access to the computer/domain"
+                      ],
+                      "distinguishedname": [
+                        "CN=Guest,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "instancetype": [
+                        "4"
+                      ],
+                      "whencreated": [
+                        "20210820112157.0Z"
+                      ],
+                      "whenchanged": [
+                        "20210820162732.0Z"
+                      ],
+                      "displayname": [
+                        "Suzy"
+                      ],
+                      "usncreated": [
+                        "8197"
+                      ],
+                      "memberof": [
+                        "CN=Guests,CN=Builtin,DC=uplift,DC=local"
+                      ],
+                      "usnchanged": [
+                        "24597"
+                      ],
+                      "name": [
+                        "Guest"
+                      ],
+                      "objectguid": "595d1845-c429-44dd-b9ac-daf45fe3dbe1",
+                      "useraccountcontrol": [
+                        "66082"
+                      ],
+                      "badpwdcount": [
+                        "0"
+                      ],
+                      "codepage": [
+                        "0"
+                      ],
+                      "countrycode": [
+                        "0"
+                      ],
+                      "badpasswordtime": [
+                        "0"
+                      ],
+                      "lastlogoff": [
+                        "0"
+                      ],
+                      "lastlogon": [
+                        "0"
+                      ],
+                      "pwdlastset": [
+                        "0"
+                      ],
+                      "primarygroupid": [
+                        "514"
+                      ],
+                      "objectsid": "S-1-5-21-3543265425-1345166158-814452509-501",
+                      "accountexpires": [
+                        "9223372036854775807"
+                      ],
+                      "logoncount": [
+                        "0"
+                      ],
+                      "samaccountname": [
+                        "Guest"
+                      ],
+                      "samaccounttype": [
+                        "805306368"
+                      ],
+                      "objectcategory": [
+                        "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                      ],
+                      "iscriticalsystemobject": [
+                        "TRUE"
+                      ],
+                      "dscorepropagationdata": [
+                        "20210820012802.0Z",
+                        "16010101000001.0Z"
+                      ]
+                    },
+                    {
+                      "0": "objectclass",
+                      "1": "cn",
+                      "2": "description",
+                      "3": "distinguishedname",
+                      "4": "instancetype",
+                      "5": "whencreated",
+                      "6": "whenchanged",
+                      "7": "usncreated",
+                      "8": "memberof",
+                      "9": "usnchanged",
+                      "10": "name",
+                      "11": "objectguid",
+                      "12": "useraccountcontrol",
+                      "13": "badpwdcount",
+                      "14": "codepage",
+                      "15": "countrycode",
+                      "16": "badpasswordtime",
+                      "17": "lastlogoff",
+                      "18": "lastlogon",
+                      "19": "pwdlastset",
+                      "20": "primarygroupid",
+                      "21": "objectsid",
+                      "22": "accountexpires",
+                      "23": "logoncount",
+                      "24": "samaccountname",
+                      "25": "samaccounttype",
+                      "26": "objectcategory",
+                      "27": "iscriticalsystemobject",
+                      "28": "dscorepropagationdata",
+                      "objectclass": [
+                        "top",
+                        "person",
+                        "organizationalPerson",
+                        "user"
+                      ],
+                      "cn": [
+                        "DefaultAccount"
+                      ],
+                      "description": [
+                        "A user account managed by the system."
+                      ],
+                      "distinguishedname": [
+                        "CN=DefaultAccount,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "instancetype": [
+                        "4"
+                      ],
+                      "whencreated": [
+                        "20210820112157.0Z"
+                      ],
+                      "whenchanged": [
+                        "20210820112157.0Z"
+                      ],
+                      "usncreated": [
+                        "8198"
+                      ],
+                      "memberof": [
+                        "CN=System Managed Accounts Group,CN=Builtin,DC=uplift,DC=local"
+                      ],
+                      "usnchanged": [
+                        "8198"
+                      ],
+                      "name": [
+                        "DefaultAccount"
+                      ],
+                      "objectguid": "ae382ddc-f50b-433e-8f6f-7496bd1e60c5",
+                      "useraccountcontrol": [
+                        "66082"
+                      ],
+                      "badpwdcount": [
+                        "0"
+                      ],
+                      "codepage": [
+                        "0"
+                      ],
+                      "countrycode": [
+                        "0"
+                      ],
+                      "badpasswordtime": [
+                        "0"
+                      ],
+                      "lastlogoff": [
+                        "0"
+                      ],
+                      "lastlogon": [
+                        "0"
+                      ],
+                      "pwdlastset": [
+                        "0"
+                      ],
+                      "primarygroupid": [
+                        "513"
+                      ],
+                      "objectsid": "S-1-5-21-3543265425-1345166158-814452509-503",
+                      "accountexpires": [
+                        "9223372036854775807"
+                      ],
+                      "logoncount": [
+                        "0"
+                      ],
+                      "samaccountname": [
+                        "DefaultAccount"
+                      ],
+                      "samaccounttype": [
+                        "805306368"
+                      ],
+                      "objectcategory": [
+                        "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                      ],
+                      "iscriticalsystemobject": [
+                        "TRUE"
+                      ],
+                      "dscorepropagationdata": [
+                        "20210820012802.0Z",
+                        "16010101000001.0Z"
+                      ]
+                    },
+                    {
+                      "0": "objectclass",
+                      "1": "cn",
+                      "2": "description",
+                      "3": "distinguishedname",
+                      "4": "instancetype",
+                      "5": "whencreated",
+                      "6": "whenchanged",
+                      "7": "displayname",
+                      "8": "usncreated",
+                      "9": "memberof",
+                      "10": "usnchanged",
+                      "11": "name",
+                      "12": "objectguid",
+                      "13": "useraccountcontrol",
+                      "14": "badpwdcount",
+                      "15": "codepage",
+                      "16": "countrycode",
+                      "17": "badpasswordtime",
+                      "18": "lastlogoff",
+                      "19": "lastlogon",
+                      "20": "logonhours",
+                      "21": "pwdlastset",
+                      "22": "primarygroupid",
+                      "23": "objectsid",
+                      "24": "admincount",
+                      "25": "accountexpires",
+                      "26": "logoncount",
+                      "27": "samaccountname",
+                      "28": "samaccounttype",
+                      "29": "objectcategory",
+                      "30": "dscorepropagationdata",
+                      "31": "lastlogontimestamp",
+                      "objectclass": [
+                        "top",
+                        "person",
+                        "organizationalPerson",
+                        "user"
+                      ],
+                      "cn": [
+                        "vagrant"
+                      ],
+                      "description": [
+                        "Vagrant User"
+                      ],
+                      "distinguishedname": [
+                        "CN=vagrant,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "instancetype": [
+                        "4"
+                      ],
+                      "whencreated": [
+                        "20210820112157.0Z"
+                      ],
+                      "whenchanged": [
+                        "20210820114313.0Z"
+                      ],
+                      "displayname": [
+                        "Vagrant"
+                      ],
+                      "usncreated": [
+                        "8199"
+                      ],
+                      "memberof": [
+                        "CN=Domain Admins,CN=Users,DC=uplift,DC=local",
+                        "CN=Performance Log Users,CN=Builtin,DC=uplift,DC=local",
+                        "CN=Users,CN=Builtin,DC=uplift,DC=local",
+                        "CN=Administrators,CN=Builtin,DC=uplift,DC=local"
+                      ],
+                      "usnchanged": [
+                        "13020"
+                      ],
+                      "name": [
+                        "vagrant"
+                      ],
+                      "objectguid": "8a164135-77e0-488b-a9eb-9760f3b1bdee",
+                      "useraccountcontrol": [
+                        "66048"
+                      ],
+                      "badpwdcount": [
+                        "0"
+                      ],
+                      "codepage": [
+                        "1252"
+                      ],
+                      "countrycode": [
+                        "1"
+                      ],
+                      "badpasswordtime": [
+                        "132743714300671687"
+                      ],
+                      "lastlogoff": [
+                        "0"
+                      ],
+                      "lastlogon": [
+                        "132743714347077546"
+                      ],
+                      "logonhours": [
+                        "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ"
+                      ],
+                      "pwdlastset": [
+                        "132739312437851272"
+                      ],
+                      "primarygroupid": [
+                        "513"
+                      ],
+                      "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1000",
+                      "admincount": [
+                        "1"
+                      ],
+                      "accountexpires": [
+                        "0"
+                      ],
+                      "logoncount": [
+                        "364"
+                      ],
+                      "samaccountname": [
+                        "vagrant"
+                      ],
+                      "samaccounttype": [
+                        "805306368"
+                      ],
+                      "objectcategory": [
+                        "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                      ],
+                      "dscorepropagationdata": [
+                        "20210820114313.0Z",
+                        "20210820012802.0Z",
+                        "16010101000416.0Z"
+                      ],
+                      "lastlogontimestamp": [
+                        "132739325198473298"
+                      ]
+                    },
+                    {
+                      "0": "objectclass",
+                      "1": "cn",
+                      "2": "description",
+                      "3": "distinguishedname",
+                      "4": "instancetype",
+                      "5": "whencreated",
+                      "6": "whenchanged",
+                      "7": "usncreated",
+                      "8": "memberof",
+                      "9": "usnchanged",
+                      "10": "showinadvancedviewonly",
+                      "11": "name",
+                      "12": "objectguid",
+                      "13": "useraccountcontrol",
+                      "14": "badpwdcount",
+                      "15": "codepage",
+                      "16": "countrycode",
+                      "17": "badpasswordtime",
+                      "18": "lastlogoff",
+                      "19": "lastlogon",
+                      "20": "pwdlastset",
+                      "21": "primarygroupid",
+                      "22": "objectsid",
+                      "23": "admincount",
+                      "24": "accountexpires",
+                      "25": "logoncount",
+                      "26": "samaccountname",
+                      "27": "samaccounttype",
+                      "28": "serviceprincipalname",
+                      "29": "objectcategory",
+                      "30": "iscriticalsystemobject",
+                      "31": "dscorepropagationdata",
+                      "32": "msds-supportedencryptiontypes",
+                      "objectclass": [
+                        "top",
+                        "person",
+                        "organizationalPerson",
+                        "user"
+                      ],
+                      "cn": [
+                        "krbtgt"
+                      ],
+                      "description": [
+                        "Key Distribution Center Service Account"
+                      ],
+                      "distinguishedname": [
+                        "CN=krbtgt,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "instancetype": [
+                        "4"
+                      ],
+                      "whencreated": [
+                        "20210820012802.0Z"
+                      ],
+                      "whenchanged": [
+                        "20210820114313.0Z"
+                      ],
+                      "usncreated": [
+                        "12324"
+                      ],
+                      "memberof": [
+                        "CN=Denied RODC Password Replication Group,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "usnchanged": [
+                        "13038"
+                      ],
+                      "showinadvancedviewonly": [
+                        "TRUE"
+                      ],
+                      "name": [
+                        "krbtgt"
+                      ],
+                      "objectguid": "0f7f41ba-67c0-4307-a2b5-da30cd224ae0",
+                      "useraccountcontrol": [
+                        "514"
+                      ],
+                      "badpwdcount": [
+                        "0"
+                      ],
+                      "codepage": [
+                        "0"
+                      ],
+                      "countrycode": [
+                        "0"
+                      ],
+                      "badpasswordtime": [
+                        "0"
+                      ],
+                      "lastlogoff": [
+                        "0"
+                      ],
+                      "lastlogon": [
+                        "0"
+                      ],
+                      "pwdlastset": [
+                        "132738964823103895"
+                      ],
+                      "primarygroupid": [
+                        "513"
+                      ],
+                      "objectsid": "S-1-5-21-3543265425-1345166158-814452509-502",
+                      "admincount": [
+                        "1"
+                      ],
+                      "accountexpires": [
+                        "9223372036854775807"
+                      ],
+                      "logoncount": [
+                        "0"
+                      ],
+                      "samaccountname": [
+                        "krbtgt"
+                      ],
+                      "samaccounttype": [
+                        "805306368"
+                      ],
+                      "serviceprincipalname": [
+                        "kadmin/changepw"
+                      ],
+                      "objectcategory": [
+                        "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                      ],
+                      "iscriticalsystemobject": [
+                        "TRUE"
+                      ],
+                      "dscorepropagationdata": [
+                        "20210820114313.0Z",
+                        "20210820012802.0Z",
+                        "16010101000416.0Z"
+                      ],
+                      "msds-supportedencryptiontypes": [
+                        "0"
+                      ]
+                    },
+                    {
+                      "0": "objectclass",
+                      "1": "cn",
+                      "2": "distinguishedname",
+                      "3": "instancetype",
+                      "4": "whencreated",
+                      "5": "whenchanged",
+                      "6": "usncreated",
+                      "7": "memberof",
+                      "8": "usnchanged",
+                      "9": "name",
+                      "10": "objectguid",
+                      "11": "useraccountcontrol",
+                      "12": "badpwdcount",
+                      "13": "codepage",
+                      "14": "countrycode",
+                      "15": "badpasswordtime",
+                      "16": "lastlogoff",
+                      "17": "lastlogon",
+                      "18": "pwdlastset",
+                      "19": "primarygroupid",
+                      "20": "objectsid",
+                      "21": "admincount",
+                      "22": "accountexpires",
+                      "23": "logoncount",
+                      "24": "samaccountname",
+                      "25": "samaccounttype",
+                      "26": "objectcategory",
+                      "27": "dscorepropagationdata",
+                      "28": "lastlogontimestamp",
+                      "objectclass": [
+                        "top",
+                        "person",
+                        "organizationalPerson",
+                        "user"
+                      ],
+                      "cn": [
+                        "admin"
+                      ],
+                      "distinguishedname": [
+                        "CN=admin,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "instancetype": [
+                        "4"
+                      ],
+                      "whencreated": [
+                        "20210820113403.0Z"
+                      ],
+                      "whenchanged": [
+                        "20210820114313.0Z"
+                      ],
+                      "usncreated": [
+                        "12831"
+                      ],
+                      "memberof": [
+                        "CN=Domain Admins,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "usnchanged": [
+                        "13025"
+                      ],
+                      "name": [
+                        "admin"
+                      ],
+                      "objectguid": "00886987-2c4f-42a5-8957-27dca08141d6",
+                      "useraccountcontrol": [
+                        "512"
+                      ],
+                      "badpwdcount": [
+                        "0"
+                      ],
+                      "codepage": [
+                        "0"
+                      ],
+                      "countrycode": [
+                        "0"
+                      ],
+                      "badpasswordtime": [
+                        "0"
+                      ],
+                      "lastlogoff": [
+                        "0"
+                      ],
+                      "lastlogon": [
+                        "0"
+                      ],
+                      "pwdlastset": [
+                        "132739328433481002"
+                      ],
+                      "primarygroupid": [
+                        "513"
+                      ],
+                      "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1105",
+                      "admincount": [
+                        "1"
+                      ],
+                      "accountexpires": [
+                        "9223372036854775807"
+                      ],
+                      "logoncount": [
+                        "0"
+                      ],
+                      "samaccountname": [
+                        "admin"
+                      ],
+                      "samaccounttype": [
+                        "805306368"
+                      ],
+                      "objectcategory": [
+                        "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                      ],
+                      "dscorepropagationdata": [
+                        "20210820114313.0Z",
+                        "16010101000000.0Z"
+                      ],
+                      "lastlogontimestamp": [
+                        "132739328435971893"
+                      ]
+                    },
+                    {
+                      "0": "objectclass",
+                      "1": "cn",
+                      "2": "distinguishedname",
+                      "3": "instancetype",
+                      "4": "whencreated",
+                      "5": "whenchanged",
+                      "6": "usncreated",
+                      "7": "usnchanged",
+                      "8": "name",
+                      "9": "objectguid",
+                      "10": "useraccountcontrol",
+                      "11": "badpwdcount",
+                      "12": "codepage",
+                      "13": "countrycode",
+                      "14": "badpasswordtime",
+                      "15": "lastlogoff",
+                      "16": "lastlogon",
+                      "17": "pwdlastset",
+                      "18": "primarygroupid",
+                      "19": "objectsid",
+                      "20": "accountexpires",
+                      "21": "logoncount",
+                      "22": "samaccountname",
+                      "23": "samaccounttype",
+                      "24": "objectcategory",
+                      "25": "dscorepropagationdata",
+                      "objectclass": [
+                        "top",
+                        "person",
+                        "organizationalPerson",
+                        "user"
+                      ],
+                      "cn": [
+                        "John Doe"
+                      ],
+                      "distinguishedname": [
+                        "CN=John Doe,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "instancetype": [
+                        "4"
+                      ],
+                      "whencreated": [
+                        "20210820131150.0Z"
+                      ],
+                      "whenchanged": [
+                        "20210820131150.0Z"
+                      ],
+                      "usncreated": [
+                        "16399"
+                      ],
+                      "usnchanged": [
+                        "16400"
+                      ],
+                      "name": [
+                        "John Doe"
+                      ],
+                      "objectguid": "8be2469f-b522-4b1e-ad15-5df024b94d8b",
+                      "useraccountcontrol": [
+                        "546"
+                      ],
+                      "badpwdcount": [
+                        "0"
+                      ],
+                      "codepage": [
+                        "0"
+                      ],
+                      "countrycode": [
+                        "0"
+                      ],
+                      "badpasswordtime": [
+                        "0"
+                      ],
+                      "lastlogoff": [
+                        "0"
+                      ],
+                      "lastlogon": [
+                        "0"
+                      ],
+                      "pwdlastset": [
+                        "0"
+                      ],
+                      "primarygroupid": [
+                        "513"
+                      ],
+                      "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1106",
+                      "accountexpires": [
+                        "9223372036854775807"
+                      ],
+                      "logoncount": [
+                        "0"
+                      ],
+                      "samaccountname": [
+                        "jdoe"
+                      ],
+                      "samaccounttype": [
+                        "805306368"
+                      ],
+                      "objectcategory": [
+                        "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                      ],
+                      "dscorepropagationdata": [
+                        "16010101000000.0Z"
+                      ]
+                    },
+                    {
+                      "0": "objectclass",
+                      "1": "cn",
+                      "2": "sn",
+                      "3": "givenname",
+                      "4": "distinguishedname",
+                      "5": "instancetype",
+                      "6": "whencreated",
+                      "7": "whenchanged",
+                      "8": "displayname",
+                      "9": "usncreated",
+                      "10": "usnchanged",
+                      "11": "name",
+                      "12": "objectguid",
+                      "13": "useraccountcontrol",
+                      "14": "badpwdcount",
+                      "15": "codepage",
+                      "16": "countrycode",
+                      "17": "homedirectory",
+                      "18": "homedrive",
+                      "19": "badpasswordtime",
+                      "20": "lastlogoff",
+                      "21": "lastlogon",
+                      "22": "pwdlastset",
+                      "23": "primarygroupid",
+                      "24": "objectsid",
+                      "25": "accountexpires",
+                      "26": "logoncount",
+                      "27": "samaccountname",
+                      "28": "samaccounttype",
+                      "29": "userprincipalname",
+                      "30": "objectcategory",
+                      "31": "dscorepropagationdata",
+                      "objectclass": [
+                        "top",
+                        "person",
+                        "organizationalPerson",
+                        "user"
+                      ],
+                      "cn": [
+                        "johny Doe"
+                      ],
+                      "sn": [
+                        "Doe"
+                      ],
+                      "givenname": [
+                        "johny"
+                      ],
+                      "distinguishedname": [
+                        "CN=johny Doe,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "instancetype": [
+                        "4"
+                      ],
+                      "whencreated": [
+                        "20210825084710.0Z"
+                      ],
+                      "whenchanged": [
+                        "20210825100354.0Z"
+                      ],
+                      "displayname": [
+                        "johny Doe"
+                      ],
+                      "usncreated": [
+                        "82004"
+                      ],
+                      "usnchanged": [
+                        "86074"
+                      ],
+                      "name": [
+                        "johny Doe"
+                      ],
+                      "objectguid": "0f13b3a1-011e-4200-aea5-148dc6d890e4",
+                      "useraccountcontrol": [
+                        "512"
+                      ],
+                      "badpwdcount": [
+                        "0"
+                      ],
+                      "codepage": [
+                        "0"
+                      ],
+                      "countrycode": [
+                        "0"
+                      ],
+                      "homedirectory": [
+                        "\\\\share\\f"
+                      ],
+                      "homedrive": [
+                        "Z:"
+                      ],
+                      "badpasswordtime": [
+                        "0"
+                      ],
+                      "lastlogoff": [
+                        "0"
+                      ],
+                      "lastlogon": [
+                        "0"
+                      ],
+                      "pwdlastset": [
+                        "0"
+                      ],
+                      "primarygroupid": [
+                        "513"
+                      ],
+                      "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1120",
+                      "accountexpires": [
+                        "9223372036854775807"
+                      ],
+                      "logoncount": [
+                        "0"
+                      ],
+                      "samaccountname": [
+                        "j.doe"
+                      ],
+                      "samaccounttype": [
+                        "805306368"
+                      ],
+                      "userprincipalname": [
+                        "j.doe@uplift.local"
+                      ],
+                      "objectcategory": [
+                        "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                      ],
+                      "dscorepropagationdata": [
+                        "16010101000000.0Z"
+                      ]
+                    },
+                    {
+                      "0": "objectclass",
+                      "1": "cn",
+                      "2": "c",
+                      "3": "description",
+                      "4": "distinguishedname",
+                      "5": "instancetype",
+                      "6": "whencreated",
+                      "7": "whenchanged",
+                      "8": "displayname",
+                      "9": "usncreated",
+                      "10": "usnchanged",
+                      "11": "name",
+                      "12": "objectguid",
+                      "13": "useraccountcontrol",
+                      "14": "badpwdcount",
+                      "15": "codepage",
+                      "16": "countrycode",
+                      "17": "badpasswordtime",
+                      "18": "lastlogoff",
+                      "19": "lastlogon",
+                      "20": "pwdlastset",
+                      "21": "primarygroupid",
+                      "22": "objectsid",
+                      "23": "accountexpires",
+                      "24": "logoncount",
+                      "25": "samaccountname",
+                      "26": "samaccounttype",
+                      "27": "objectcategory",
+                      "28": "dscorepropagationdata",
+                      "objectclass": [
+                        "top",
+                        "person",
+                        "organizationalPerson",
+                        "user"
+                      ],
+                      "cn": [
+                        "Meagain"
+                      ],
+                      "c": [
+                        "PT"
+                      ],
+                      "description": [
+                        "Lorem Ipsum"
+                      ],
+                      "distinguishedname": [
+                        "CN=Meagain,CN=Users,DC=uplift,DC=local"
+                      ],
+                      "instancetype": [
+                        "4"
+                      ],
+                      "whencreated": [
+                        "20210825092640.0Z"
+                      ],
+                      "whenchanged": [
+                        "20210825092731.0Z"
+                      ],
+                      "displayname": [
+                        "John Doe"
+                      ],
+                      "usncreated": [
+                        "86052"
+                      ],
+                      "usnchanged": [
+                        "86054"
+                      ],
+                      "name": [
+                        "Meagain"
+                      ],
+                      "objectguid": "0f4fe983-53f6-4409-b2fd-e2b894bfeb2f",
+                      "useraccountcontrol": [
+                        "546"
+                      ],
+                      "badpwdcount": [
+                        "0"
+                      ],
+                      "codepage": [
+                        "0"
+                      ],
+                      "countrycode": [
+                        "0"
+                      ],
+                      "badpasswordtime": [
+                        "0"
+                      ],
+                      "lastlogoff": [
+                        "0"
+                      ],
+                      "lastlogon": [
+                        "0"
+                      ],
+                      "pwdlastset": [
+                        "0"
+                      ],
+                      "primarygroupid": [
+                        "513"
+                      ],
+                      "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1122",
+                      "accountexpires": [
+                        "0"
+                      ],
+                      "logoncount": [
+                        "0"
+                      ],
+                      "samaccountname": [
+                        "$231000-3QJTV8FCURS0"
+                      ],
+                      "samaccounttype": [
+                        "805306368"
+                      ],
+                      "objectcategory": [
+                        "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                      ],
+                      "dscorepropagationdata": [
+                        "20210825092731.0Z",
+                        "16010101000000.0Z"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "users": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "0": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "1": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "2": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "3": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "4": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "5": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "6": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "7": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "8": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "9": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "10": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "11": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "12": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "13": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "14": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "15": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "16": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "17": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "18": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "19": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "20": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "21": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "22": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "23": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "24": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "25": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "26": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "27": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "28": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "29": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "30": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "31": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "32": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "objectclass": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "cn": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "description": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "distinguishedname": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "instancetype": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "whencreated": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "whenchanged": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "usncreated": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "memberof": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "usnchanged": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "showinadvancedviewonly": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "name": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "objectguid": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "useraccountcontrol": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "badpwdcount": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "codepage": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "countrycode": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "badpasswordtime": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "lastlogoff": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "lastlogon": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "pwdlastset": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "primarygroupid": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "objectsid": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "admincount": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "accountexpires": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "logoncount": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "samaccountname": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "samaccounttype": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "serviceprincipalname": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "objectcategory": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "iscriticalsystemobject": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "dscorepropagationdata": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "msds-supportedencryptiontypes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      }
+                    },
+                    "required": [
+                      "objectguid"
+                    ]
+                  }
+                }
+              }
+            },
+            "examples": {
+              "Example": {
+                "message": "Users retrieved successfully",
+                "users": [
+                  {
+                    "0": "objectclass",
+                    "1": "cn",
+                    "2": "description",
+                    "3": "distinguishedname",
+                    "4": "instancetype",
+                    "5": "whencreated",
+                    "6": "whenchanged",
+                    "7": "usncreated",
+                    "8": "memberof",
+                    "9": "usnchanged",
+                    "10": "name",
+                    "11": "objectguid",
+                    "12": "useraccountcontrol",
+                    "13": "badpwdcount",
+                    "14": "codepage",
+                    "15": "countrycode",
+                    "16": "badpasswordtime",
+                    "17": "lastlogoff",
+                    "18": "lastlogon",
+                    "19": "logonhours",
+                    "20": "pwdlastset",
+                    "21": "primarygroupid",
+                    "22": "objectsid",
+                    "23": "admincount",
+                    "24": "accountexpires",
+                    "25": "logoncount",
+                    "26": "samaccountname",
+                    "27": "samaccounttype",
+                    "28": "objectcategory",
+                    "29": "iscriticalsystemobject",
+                    "30": "dscorepropagationdata",
+                    "objectclass": [
+                      "top",
+                      "person",
+                      "organizationalPerson",
+                      "user"
+                    ],
+                    "cn": [
+                      "Administrator"
+                    ],
+                    "description": [
+                      "Built-in account for administering the computer/domain"
+                    ],
+                    "distinguishedname": [
+                      "CN=Administrator,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "instancetype": [
+                      "4"
+                    ],
+                    "whencreated": [
+                      "20210820112157.0Z"
+                    ],
+                    "whenchanged": [
+                      "20210820114313.0Z"
+                    ],
+                    "usncreated": [
+                      "8196"
+                    ],
+                    "memberof": [
+                      "CN=Group Policy Creator Owners,CN=Users,DC=uplift,DC=local",
+                      "CN=Domain Admins,CN=Users,DC=uplift,DC=local",
+                      "CN=Enterprise Admins,CN=Users,DC=uplift,DC=local",
+                      "CN=Schema Admins,CN=Users,DC=uplift,DC=local",
+                      "CN=Administrators,CN=Builtin,DC=uplift,DC=local"
+                    ],
+                    "usnchanged": [
+                      "13027"
+                    ],
+                    "name": [
+                      "Administrator"
+                    ],
+                    "objectguid": "46b559e8-95e4-433d-8a6b-fe5bab219ba4",
+                    "useraccountcontrol": [
+                      "512"
+                    ],
+                    "badpwdcount": [
+                      "0"
+                    ],
+                    "codepage": [
+                      "0"
+                    ],
+                    "countrycode": [
+                      "0"
+                    ],
+                    "badpasswordtime": [
+                      "0"
+                    ],
+                    "lastlogoff": [
+                      "0"
+                    ],
+                    "lastlogon": [
+                      "132739316489463231"
+                    ],
+                    "logonhours": [
+                      "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ"
+                    ],
+                    "pwdlastset": [
+                      "132739319918915024"
+                    ],
+                    "primarygroupid": [
+                      "513"
+                    ],
+                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-500",
+                    "admincount": [
+                      "1"
+                    ],
+                    "accountexpires": [
+                      "0"
+                    ],
+                    "logoncount": [
+                      "2"
+                    ],
+                    "samaccountname": [
+                      "Administrator"
+                    ],
+                    "samaccounttype": [
+                      "805306368"
+                    ],
+                    "objectcategory": [
+                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                    ],
+                    "iscriticalsystemobject": [
+                      "TRUE"
+                    ],
+                    "dscorepropagationdata": [
+                      "20210820114313.0Z",
+                      "20210820114313.0Z",
+                      "20210820012802.0Z",
+                      "16010101181216.0Z"
+                    ]
+                  },
+                  {
+                    "0": "objectclass",
+                    "1": "cn",
+                    "2": "description",
+                    "3": "distinguishedname",
+                    "4": "instancetype",
+                    "5": "whencreated",
+                    "6": "whenchanged",
+                    "7": "displayname",
+                    "8": "usncreated",
+                    "9": "memberof",
+                    "10": "usnchanged",
+                    "11": "name",
+                    "12": "objectguid",
+                    "13": "useraccountcontrol",
+                    "14": "badpwdcount",
+                    "15": "codepage",
+                    "16": "countrycode",
+                    "17": "badpasswordtime",
+                    "18": "lastlogoff",
+                    "19": "lastlogon",
+                    "20": "pwdlastset",
+                    "21": "primarygroupid",
+                    "22": "objectsid",
+                    "23": "accountexpires",
+                    "24": "logoncount",
+                    "25": "samaccountname",
+                    "26": "samaccounttype",
+                    "27": "objectcategory",
+                    "28": "iscriticalsystemobject",
+                    "29": "dscorepropagationdata",
+                    "objectclass": [
+                      "top",
+                      "person",
+                      "organizationalPerson",
+                      "user"
+                    ],
+                    "cn": [
+                      "Guest"
+                    ],
+                    "description": [
+                      "Built-in account for guest access to the computer/domain"
+                    ],
+                    "distinguishedname": [
+                      "CN=Guest,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "instancetype": [
+                      "4"
+                    ],
+                    "whencreated": [
+                      "20210820112157.0Z"
+                    ],
+                    "whenchanged": [
+                      "20210820162732.0Z"
+                    ],
+                    "displayname": [
+                      "Suzy"
+                    ],
+                    "usncreated": [
+                      "8197"
+                    ],
+                    "memberof": [
+                      "CN=Guests,CN=Builtin,DC=uplift,DC=local"
+                    ],
+                    "usnchanged": [
+                      "24597"
+                    ],
+                    "name": [
+                      "Guest"
+                    ],
+                    "objectguid": "595d1845-c429-44dd-b9ac-daf45fe3dbe1",
+                    "useraccountcontrol": [
+                      "66082"
+                    ],
+                    "badpwdcount": [
+                      "0"
+                    ],
+                    "codepage": [
+                      "0"
+                    ],
+                    "countrycode": [
+                      "0"
+                    ],
+                    "badpasswordtime": [
+                      "0"
+                    ],
+                    "lastlogoff": [
+                      "0"
+                    ],
+                    "lastlogon": [
+                      "0"
+                    ],
+                    "pwdlastset": [
+                      "0"
+                    ],
+                    "primarygroupid": [
+                      "514"
+                    ],
+                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-501",
+                    "accountexpires": [
+                      "9223372036854775807"
+                    ],
+                    "logoncount": [
+                      "0"
+                    ],
+                    "samaccountname": [
+                      "Guest"
+                    ],
+                    "samaccounttype": [
+                      "805306368"
+                    ],
+                    "objectcategory": [
+                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                    ],
+                    "iscriticalsystemobject": [
+                      "TRUE"
+                    ],
+                    "dscorepropagationdata": [
+                      "20210820012802.0Z",
+                      "16010101000001.0Z"
+                    ]
+                  },
+                  {
+                    "0": "objectclass",
+                    "1": "cn",
+                    "2": "description",
+                    "3": "distinguishedname",
+                    "4": "instancetype",
+                    "5": "whencreated",
+                    "6": "whenchanged",
+                    "7": "usncreated",
+                    "8": "memberof",
+                    "9": "usnchanged",
+                    "10": "name",
+                    "11": "objectguid",
+                    "12": "useraccountcontrol",
+                    "13": "badpwdcount",
+                    "14": "codepage",
+                    "15": "countrycode",
+                    "16": "badpasswordtime",
+                    "17": "lastlogoff",
+                    "18": "lastlogon",
+                    "19": "pwdlastset",
+                    "20": "primarygroupid",
+                    "21": "objectsid",
+                    "22": "accountexpires",
+                    "23": "logoncount",
+                    "24": "samaccountname",
+                    "25": "samaccounttype",
+                    "26": "objectcategory",
+                    "27": "iscriticalsystemobject",
+                    "28": "dscorepropagationdata",
+                    "objectclass": [
+                      "top",
+                      "person",
+                      "organizationalPerson",
+                      "user"
+                    ],
+                    "cn": [
+                      "DefaultAccount"
+                    ],
+                    "description": [
+                      "A user account managed by the system."
+                    ],
+                    "distinguishedname": [
+                      "CN=DefaultAccount,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "instancetype": [
+                      "4"
+                    ],
+                    "whencreated": [
+                      "20210820112157.0Z"
+                    ],
+                    "whenchanged": [
+                      "20210820112157.0Z"
+                    ],
+                    "usncreated": [
+                      "8198"
+                    ],
+                    "memberof": [
+                      "CN=System Managed Accounts Group,CN=Builtin,DC=uplift,DC=local"
+                    ],
+                    "usnchanged": [
+                      "8198"
+                    ],
+                    "name": [
+                      "DefaultAccount"
+                    ],
+                    "objectguid": "ae382ddc-f50b-433e-8f6f-7496bd1e60c5",
+                    "useraccountcontrol": [
+                      "66082"
+                    ],
+                    "badpwdcount": [
+                      "0"
+                    ],
+                    "codepage": [
+                      "0"
+                    ],
+                    "countrycode": [
+                      "0"
+                    ],
+                    "badpasswordtime": [
+                      "0"
+                    ],
+                    "lastlogoff": [
+                      "0"
+                    ],
+                    "lastlogon": [
+                      "0"
+                    ],
+                    "pwdlastset": [
+                      "0"
+                    ],
+                    "primarygroupid": [
+                      "513"
+                    ],
+                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-503",
+                    "accountexpires": [
+                      "9223372036854775807"
+                    ],
+                    "logoncount": [
+                      "0"
+                    ],
+                    "samaccountname": [
+                      "DefaultAccount"
+                    ],
+                    "samaccounttype": [
+                      "805306368"
+                    ],
+                    "objectcategory": [
+                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                    ],
+                    "iscriticalsystemobject": [
+                      "TRUE"
+                    ],
+                    "dscorepropagationdata": [
+                      "20210820012802.0Z",
+                      "16010101000001.0Z"
+                    ]
+                  },
+                  {
+                    "0": "objectclass",
+                    "1": "cn",
+                    "2": "description",
+                    "3": "distinguishedname",
+                    "4": "instancetype",
+                    "5": "whencreated",
+                    "6": "whenchanged",
+                    "7": "displayname",
+                    "8": "usncreated",
+                    "9": "memberof",
+                    "10": "usnchanged",
+                    "11": "name",
+                    "12": "objectguid",
+                    "13": "useraccountcontrol",
+                    "14": "badpwdcount",
+                    "15": "codepage",
+                    "16": "countrycode",
+                    "17": "badpasswordtime",
+                    "18": "lastlogoff",
+                    "19": "lastlogon",
+                    "20": "logonhours",
+                    "21": "pwdlastset",
+                    "22": "primarygroupid",
+                    "23": "objectsid",
+                    "24": "admincount",
+                    "25": "accountexpires",
+                    "26": "logoncount",
+                    "27": "samaccountname",
+                    "28": "samaccounttype",
+                    "29": "objectcategory",
+                    "30": "dscorepropagationdata",
+                    "31": "lastlogontimestamp",
+                    "objectclass": [
+                      "top",
+                      "person",
+                      "organizationalPerson",
+                      "user"
+                    ],
+                    "cn": [
+                      "vagrant"
+                    ],
+                    "description": [
+                      "Vagrant User"
+                    ],
+                    "distinguishedname": [
+                      "CN=vagrant,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "instancetype": [
+                      "4"
+                    ],
+                    "whencreated": [
+                      "20210820112157.0Z"
+                    ],
+                    "whenchanged": [
+                      "20210820114313.0Z"
+                    ],
+                    "displayname": [
+                      "Vagrant"
+                    ],
+                    "usncreated": [
+                      "8199"
+                    ],
+                    "memberof": [
+                      "CN=Domain Admins,CN=Users,DC=uplift,DC=local",
+                      "CN=Performance Log Users,CN=Builtin,DC=uplift,DC=local",
+                      "CN=Users,CN=Builtin,DC=uplift,DC=local",
+                      "CN=Administrators,CN=Builtin,DC=uplift,DC=local"
+                    ],
+                    "usnchanged": [
+                      "13020"
+                    ],
+                    "name": [
+                      "vagrant"
+                    ],
+                    "objectguid": "8a164135-77e0-488b-a9eb-9760f3b1bdee",
+                    "useraccountcontrol": [
+                      "66048"
+                    ],
+                    "badpwdcount": [
+                      "0"
+                    ],
+                    "codepage": [
+                      "1252"
+                    ],
+                    "countrycode": [
+                      "1"
+                    ],
+                    "badpasswordtime": [
+                      "132743714300671687"
+                    ],
+                    "lastlogoff": [
+                      "0"
+                    ],
+                    "lastlogon": [
+                      "132743714347077546"
+                    ],
+                    "logonhours": [
+                      "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ"
+                    ],
+                    "pwdlastset": [
+                      "132739312437851272"
+                    ],
+                    "primarygroupid": [
+                      "513"
+                    ],
+                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1000",
+                    "admincount": [
+                      "1"
+                    ],
+                    "accountexpires": [
+                      "0"
+                    ],
+                    "logoncount": [
+                      "364"
+                    ],
+                    "samaccountname": [
+                      "vagrant"
+                    ],
+                    "samaccounttype": [
+                      "805306368"
+                    ],
+                    "objectcategory": [
+                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                    ],
+                    "dscorepropagationdata": [
+                      "20210820114313.0Z",
+                      "20210820012802.0Z",
+                      "16010101000416.0Z"
+                    ],
+                    "lastlogontimestamp": [
+                      "132739325198473298"
+                    ]
+                  },
+                  {
+                    "0": "objectclass",
+                    "1": "cn",
+                    "2": "description",
+                    "3": "distinguishedname",
+                    "4": "instancetype",
+                    "5": "whencreated",
+                    "6": "whenchanged",
+                    "7": "usncreated",
+                    "8": "memberof",
+                    "9": "usnchanged",
+                    "10": "showinadvancedviewonly",
+                    "11": "name",
+                    "12": "objectguid",
+                    "13": "useraccountcontrol",
+                    "14": "badpwdcount",
+                    "15": "codepage",
+                    "16": "countrycode",
+                    "17": "badpasswordtime",
+                    "18": "lastlogoff",
+                    "19": "lastlogon",
+                    "20": "pwdlastset",
+                    "21": "primarygroupid",
+                    "22": "objectsid",
+                    "23": "admincount",
+                    "24": "accountexpires",
+                    "25": "logoncount",
+                    "26": "samaccountname",
+                    "27": "samaccounttype",
+                    "28": "serviceprincipalname",
+                    "29": "objectcategory",
+                    "30": "iscriticalsystemobject",
+                    "31": "dscorepropagationdata",
+                    "32": "msds-supportedencryptiontypes",
+                    "objectclass": [
+                      "top",
+                      "person",
+                      "organizationalPerson",
+                      "user"
+                    ],
+                    "cn": [
+                      "krbtgt"
+                    ],
+                    "description": [
+                      "Key Distribution Center Service Account"
+                    ],
+                    "distinguishedname": [
+                      "CN=krbtgt,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "instancetype": [
+                      "4"
+                    ],
+                    "whencreated": [
+                      "20210820012802.0Z"
+                    ],
+                    "whenchanged": [
+                      "20210820114313.0Z"
+                    ],
+                    "usncreated": [
+                      "12324"
+                    ],
+                    "memberof": [
+                      "CN=Denied RODC Password Replication Group,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "usnchanged": [
+                      "13038"
+                    ],
+                    "showinadvancedviewonly": [
+                      "TRUE"
+                    ],
+                    "name": [
+                      "krbtgt"
+                    ],
+                    "objectguid": "0f7f41ba-67c0-4307-a2b5-da30cd224ae0",
+                    "useraccountcontrol": [
+                      "514"
+                    ],
+                    "badpwdcount": [
+                      "0"
+                    ],
+                    "codepage": [
+                      "0"
+                    ],
+                    "countrycode": [
+                      "0"
+                    ],
+                    "badpasswordtime": [
+                      "0"
+                    ],
+                    "lastlogoff": [
+                      "0"
+                    ],
+                    "lastlogon": [
+                      "0"
+                    ],
+                    "pwdlastset": [
+                      "132738964823103895"
+                    ],
+                    "primarygroupid": [
+                      "513"
+                    ],
+                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-502",
+                    "admincount": [
+                      "1"
+                    ],
+                    "accountexpires": [
+                      "9223372036854775807"
+                    ],
+                    "logoncount": [
+                      "0"
+                    ],
+                    "samaccountname": [
+                      "krbtgt"
+                    ],
+                    "samaccounttype": [
+                      "805306368"
+                    ],
+                    "serviceprincipalname": [
+                      "kadmin/changepw"
+                    ],
+                    "objectcategory": [
+                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                    ],
+                    "iscriticalsystemobject": [
+                      "TRUE"
+                    ],
+                    "dscorepropagationdata": [
+                      "20210820114313.0Z",
+                      "20210820012802.0Z",
+                      "16010101000416.0Z"
+                    ],
+                    "msds-supportedencryptiontypes": [
+                      "0"
+                    ]
+                  },
+                  {
+                    "0": "objectclass",
+                    "1": "cn",
+                    "2": "distinguishedname",
+                    "3": "instancetype",
+                    "4": "whencreated",
+                    "5": "whenchanged",
+                    "6": "usncreated",
+                    "7": "memberof",
+                    "8": "usnchanged",
+                    "9": "name",
+                    "10": "objectguid",
+                    "11": "useraccountcontrol",
+                    "12": "badpwdcount",
+                    "13": "codepage",
+                    "14": "countrycode",
+                    "15": "badpasswordtime",
+                    "16": "lastlogoff",
+                    "17": "lastlogon",
+                    "18": "pwdlastset",
+                    "19": "primarygroupid",
+                    "20": "objectsid",
+                    "21": "admincount",
+                    "22": "accountexpires",
+                    "23": "logoncount",
+                    "24": "samaccountname",
+                    "25": "samaccounttype",
+                    "26": "objectcategory",
+                    "27": "dscorepropagationdata",
+                    "28": "lastlogontimestamp",
+                    "objectclass": [
+                      "top",
+                      "person",
+                      "organizationalPerson",
+                      "user"
+                    ],
+                    "cn": [
+                      "admin"
+                    ],
+                    "distinguishedname": [
+                      "CN=admin,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "instancetype": [
+                      "4"
+                    ],
+                    "whencreated": [
+                      "20210820113403.0Z"
+                    ],
+                    "whenchanged": [
+                      "20210820114313.0Z"
+                    ],
+                    "usncreated": [
+                      "12831"
+                    ],
+                    "memberof": [
+                      "CN=Domain Admins,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "usnchanged": [
+                      "13025"
+                    ],
+                    "name": [
+                      "admin"
+                    ],
+                    "objectguid": "00886987-2c4f-42a5-8957-27dca08141d6",
+                    "useraccountcontrol": [
+                      "512"
+                    ],
+                    "badpwdcount": [
+                      "0"
+                    ],
+                    "codepage": [
+                      "0"
+                    ],
+                    "countrycode": [
+                      "0"
+                    ],
+                    "badpasswordtime": [
+                      "0"
+                    ],
+                    "lastlogoff": [
+                      "0"
+                    ],
+                    "lastlogon": [
+                      "0"
+                    ],
+                    "pwdlastset": [
+                      "132739328433481002"
+                    ],
+                    "primarygroupid": [
+                      "513"
+                    ],
+                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1105",
+                    "admincount": [
+                      "1"
+                    ],
+                    "accountexpires": [
+                      "9223372036854775807"
+                    ],
+                    "logoncount": [
+                      "0"
+                    ],
+                    "samaccountname": [
+                      "admin"
+                    ],
+                    "samaccounttype": [
+                      "805306368"
+                    ],
+                    "objectcategory": [
+                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                    ],
+                    "dscorepropagationdata": [
+                      "20210820114313.0Z",
+                      "16010101000000.0Z"
+                    ],
+                    "lastlogontimestamp": [
+                      "132739328435971893"
+                    ]
+                  },
+                  {
+                    "0": "objectclass",
+                    "1": "cn",
+                    "2": "distinguishedname",
+                    "3": "instancetype",
+                    "4": "whencreated",
+                    "5": "whenchanged",
+                    "6": "usncreated",
+                    "7": "usnchanged",
+                    "8": "name",
+                    "9": "objectguid",
+                    "10": "useraccountcontrol",
+                    "11": "badpwdcount",
+                    "12": "codepage",
+                    "13": "countrycode",
+                    "14": "badpasswordtime",
+                    "15": "lastlogoff",
+                    "16": "lastlogon",
+                    "17": "pwdlastset",
+                    "18": "primarygroupid",
+                    "19": "objectsid",
+                    "20": "accountexpires",
+                    "21": "logoncount",
+                    "22": "samaccountname",
+                    "23": "samaccounttype",
+                    "24": "objectcategory",
+                    "25": "dscorepropagationdata",
+                    "objectclass": [
+                      "top",
+                      "person",
+                      "organizationalPerson",
+                      "user"
+                    ],
+                    "cn": [
+                      "John Doe"
+                    ],
+                    "distinguishedname": [
+                      "CN=John Doe,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "instancetype": [
+                      "4"
+                    ],
+                    "whencreated": [
+                      "20210820131150.0Z"
+                    ],
+                    "whenchanged": [
+                      "20210820131150.0Z"
+                    ],
+                    "usncreated": [
+                      "16399"
+                    ],
+                    "usnchanged": [
+                      "16400"
+                    ],
+                    "name": [
+                      "John Doe"
+                    ],
+                    "objectguid": "8be2469f-b522-4b1e-ad15-5df024b94d8b",
+                    "useraccountcontrol": [
+                      "546"
+                    ],
+                    "badpwdcount": [
+                      "0"
+                    ],
+                    "codepage": [
+                      "0"
+                    ],
+                    "countrycode": [
+                      "0"
+                    ],
+                    "badpasswordtime": [
+                      "0"
+                    ],
+                    "lastlogoff": [
+                      "0"
+                    ],
+                    "lastlogon": [
+                      "0"
+                    ],
+                    "pwdlastset": [
+                      "0"
+                    ],
+                    "primarygroupid": [
+                      "513"
+                    ],
+                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1106",
+                    "accountexpires": [
+                      "9223372036854775807"
+                    ],
+                    "logoncount": [
+                      "0"
+                    ],
+                    "samaccountname": [
+                      "jdoe"
+                    ],
+                    "samaccounttype": [
+                      "805306368"
+                    ],
+                    "objectcategory": [
+                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                    ],
+                    "dscorepropagationdata": [
+                      "16010101000000.0Z"
+                    ]
+                  },
+                  {
+                    "0": "objectclass",
+                    "1": "cn",
+                    "2": "sn",
+                    "3": "givenname",
+                    "4": "distinguishedname",
+                    "5": "instancetype",
+                    "6": "whencreated",
+                    "7": "whenchanged",
+                    "8": "displayname",
+                    "9": "usncreated",
+                    "10": "usnchanged",
+                    "11": "name",
+                    "12": "objectguid",
+                    "13": "useraccountcontrol",
+                    "14": "badpwdcount",
+                    "15": "codepage",
+                    "16": "countrycode",
+                    "17": "homedirectory",
+                    "18": "homedrive",
+                    "19": "badpasswordtime",
+                    "20": "lastlogoff",
+                    "21": "lastlogon",
+                    "22": "pwdlastset",
+                    "23": "primarygroupid",
+                    "24": "objectsid",
+                    "25": "accountexpires",
+                    "26": "logoncount",
+                    "27": "samaccountname",
+                    "28": "samaccounttype",
+                    "29": "userprincipalname",
+                    "30": "objectcategory",
+                    "31": "dscorepropagationdata",
+                    "objectclass": [
+                      "top",
+                      "person",
+                      "organizationalPerson",
+                      "user"
+                    ],
+                    "cn": [
+                      "johny Doe"
+                    ],
+                    "sn": [
+                      "Doe"
+                    ],
+                    "givenname": [
+                      "johny"
+                    ],
+                    "distinguishedname": [
+                      "CN=johny Doe,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "instancetype": [
+                      "4"
+                    ],
+                    "whencreated": [
+                      "20210825084710.0Z"
+                    ],
+                    "whenchanged": [
+                      "20210825100354.0Z"
+                    ],
+                    "displayname": [
+                      "johny Doe"
+                    ],
+                    "usncreated": [
+                      "82004"
+                    ],
+                    "usnchanged": [
+                      "86074"
+                    ],
+                    "name": [
+                      "johny Doe"
+                    ],
+                    "objectguid": "0f13b3a1-011e-4200-aea5-148dc6d890e4",
+                    "useraccountcontrol": [
+                      "512"
+                    ],
+                    "badpwdcount": [
+                      "0"
+                    ],
+                    "codepage": [
+                      "0"
+                    ],
+                    "countrycode": [
+                      "0"
+                    ],
+                    "homedirectory": [
+                      "\\\\share\\f"
+                    ],
+                    "homedrive": [
+                      "Z:"
+                    ],
+                    "badpasswordtime": [
+                      "0"
+                    ],
+                    "lastlogoff": [
+                      "0"
+                    ],
+                    "lastlogon": [
+                      "0"
+                    ],
+                    "pwdlastset": [
+                      "0"
+                    ],
+                    "primarygroupid": [
+                      "513"
+                    ],
+                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1120",
+                    "accountexpires": [
+                      "9223372036854775807"
+                    ],
+                    "logoncount": [
+                      "0"
+                    ],
+                    "samaccountname": [
+                      "j.doe"
+                    ],
+                    "samaccounttype": [
+                      "805306368"
+                    ],
+                    "userprincipalname": [
+                      "j.doe@uplift.local"
+                    ],
+                    "objectcategory": [
+                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                    ],
+                    "dscorepropagationdata": [
+                      "16010101000000.0Z"
+                    ]
+                  },
+                  {
+                    "0": "objectclass",
+                    "1": "cn",
+                    "2": "c",
+                    "3": "description",
+                    "4": "distinguishedname",
+                    "5": "instancetype",
+                    "6": "whencreated",
+                    "7": "whenchanged",
+                    "8": "displayname",
+                    "9": "usncreated",
+                    "10": "usnchanged",
+                    "11": "name",
+                    "12": "objectguid",
+                    "13": "useraccountcontrol",
+                    "14": "badpwdcount",
+                    "15": "codepage",
+                    "16": "countrycode",
+                    "17": "badpasswordtime",
+                    "18": "lastlogoff",
+                    "19": "lastlogon",
+                    "20": "pwdlastset",
+                    "21": "primarygroupid",
+                    "22": "objectsid",
+                    "23": "accountexpires",
+                    "24": "logoncount",
+                    "25": "samaccountname",
+                    "26": "samaccounttype",
+                    "27": "objectcategory",
+                    "28": "dscorepropagationdata",
+                    "objectclass": [
+                      "top",
+                      "person",
+                      "organizationalPerson",
+                      "user"
+                    ],
+                    "cn": [
+                      "Meagain"
+                    ],
+                    "c": [
+                      "PT"
+                    ],
+                    "description": [
+                      "Lorem Ipsum"
+                    ],
+                    "distinguishedname": [
+                      "CN=Meagain,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "instancetype": [
+                      "4"
+                    ],
+                    "whencreated": [
+                      "20210825092640.0Z"
+                    ],
+                    "whenchanged": [
+                      "20210825092731.0Z"
+                    ],
+                    "displayname": [
+                      "John Doe"
+                    ],
+                    "usncreated": [
+                      "86052"
+                    ],
+                    "usnchanged": [
+                      "86054"
+                    ],
+                    "name": [
+                      "Meagain"
+                    ],
+                    "objectguid": "0f4fe983-53f6-4409-b2fd-e2b894bfeb2f",
+                    "useraccountcontrol": [
+                      "546"
+                    ],
+                    "badpwdcount": [
+                      "0"
+                    ],
+                    "codepage": [
+                      "0"
+                    ],
+                    "countrycode": [
+                      "0"
+                    ],
+                    "badpasswordtime": [
+                      "0"
+                    ],
+                    "lastlogoff": [
+                      "0"
+                    ],
+                    "lastlogon": [
+                      "0"
+                    ],
+                    "pwdlastset": [
+                      "0"
+                    ],
+                    "primarygroupid": [
+                      "513"
+                    ],
+                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1122",
+                    "accountexpires": [
+                      "0"
+                    ],
+                    "logoncount": [
+                      "0"
+                    ],
+                    "samaccountname": [
+                      "$231000-3QJTV8FCURS0"
+                    ],
+                    "samaccounttype": [
+                      "805306368"
+                    ],
+                    "objectcategory": [
+                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                    ],
+                    "dscorepropagationdata": [
+                      "20210825092731.0Z",
+                      "16010101000000.0Z"
+                    ]
+                  }
+                ]
+              }
+            }
           }
         },
         "security": [
@@ -350,14 +2935,15 @@
             "type": "string",
             "in": "header",
             "name": "Content-Type",
-            "description": "application/json"
+            "description": "application/json",
+            "required": true
           }
         ]
       },
       "post": {
         "summary": "Create User in AD",
         "description": "Criação de utilizador na Active Directory.",
-        "operationId": "9af9db24-488c-4778-b970-215bb36f1e4f",
+        "operationId": "post-ad-account",
         "consumes": [
           "application/json"
         ],
@@ -365,22 +2951,148 @@
           {
             "required": false,
             "schema": {
-              "type": "string",
-              "default": "{\"c\":\"NO\",\"givenName\":\"Pilar\",\"middleName\":\"b\",\"sn\":\"Leal\",\"department\":\"Filmes\",\"employeeID\":\"66388954\",\"mail\":\"Adriana_Vicente@example.com\",\"memberOf\":\"123123\",\"title\":\"Supervisor\",\"wWWHomePage\":\"https://mara.net\",\"description\":\"Dynamic\",\"extensionAttribute5\":\"Adriana_Amorim@example.com\"}"
+              "description": "",
+              "type": "object",
+              "x-examples": {
+                "example-1": {
+                  "c": "TF",
+                  "givenName": "Natália",
+                  "middleName": "c",
+                  "sn": "Correia",
+                  "department": "Roupas",
+                  "employeeID": "23524518",
+                  "mail": "Elias_Barbosa@example.net",
+                  "memberOf": "123123",
+                  "title": "Engineer",
+                  "wWWHomePage": "https://afonso.com.pt",
+                  "description": "Principal",
+                  "extensionAttribute5": "Flor_Neves48@example.com"
+                }
+              },
+              "properties": {
+                "c": {
+                  "type": "string",
+                  "minLength": 1,
+                  "example": "PT",
+                  "maxLength": 2
+                },
+                "givenName": {
+                  "type": "string",
+                  "minLength": 1,
+                  "example": "Natália"
+                },
+                "middleName": {
+                  "type": "string",
+                  "minLength": 1,
+                  "example": "C"
+                },
+                "sn": {
+                  "type": "string",
+                  "minLength": 1,
+                  "example": "Correira"
+                },
+                "department": {
+                  "type": "string",
+                  "minLength": 1,
+                  "example": "SI"
+                },
+                "employeeID": {
+                  "type": "string",
+                  "minLength": 6,
+                  "example": "123123123",
+                  "maxLength": 9
+                },
+                "mail": {
+                  "type": "string",
+                  "minLength": 1,
+                  "format": "email",
+                  "example": "user@user.com"
+                },
+                "memberOf": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1,
+                  "example": "Engineer"
+                },
+                "wWWHomePage": {
+                  "type": "string",
+                  "minLength": 1,
+                  "format": "uri",
+                  "example": "https://afonso.com.pt"
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "extensionAttribute5": {
+                  "type": "string",
+                  "minLength": 1,
+                  "format": "email"
+                }
+              },
+              "required": [
+                "c",
+                "givenName",
+                "middleName",
+                "sn",
+                "department",
+                "employeeID",
+                "mail",
+                "memberOf",
+                "title",
+                "wWWHomePage",
+                "description",
+                "extensionAttribute5"
+              ]
             },
             "in": "body",
-            "name": "body"
+            "name": "body",
+            "x-examples": {
+              "Example": {
+                "c": "TF",
+                "givenName": "Natália",
+                "middleName": "c",
+                "sn": "Correia",
+                "department": "Roupas",
+                "employeeID": "23524518",
+                "mail": "Elias_Barbosa@example.net",
+                "memberOf": "123123",
+                "title": "Engineer",
+                "wWWHomePage": "https://afonso.com.pt",
+                "description": "Principal",
+                "extensionAttribute5": "Flor_Neves48@example.com"
+              }
+            }
           },
           {
             "type": "string",
             "in": "header",
             "description": "application/json",
-            "name": "Content-Type"
+            "name": "Content-Type",
+            "required": true
           }
         ],
         "responses": {
-          "default": {
-            "description": "no response description was provided for this operation"
+          "200": {
+            "description": "no response description was provided for this operation",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "x-examples": {
+                "example-1": {
+                  "message": "User created successfully"
+                }
+              },
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
           }
         },
         "security": [
@@ -392,9 +3104,9 @@
     },
     "/ad/{samaccountname}": {
       "delete": {
-        "summary": "Destroy a single user by ID",
+        "summary": "DESTROY a single user by ID",
         "description": "Apagar um utilizador da Active Directory",
-        "operationId": "abda8cdc-8dd9-4659-8aee-22fb91c05573",
+        "operationId": "delete-ad-samaccountname",
         "responses": {
           "200": {
             "description": "OK",
@@ -411,7 +3123,7 @@
         },
         "security": [
           {
-            "JWT Auth": []
+            "CAPI-JWT": []
           }
         ],
         "parameters": [
@@ -419,7 +3131,8 @@
             "type": "string",
             "in": "header",
             "description": "application/json",
-            "name": "Content-Type"
+            "name": "Content-Type",
+            "required": true
           }
         ]
       },
@@ -433,7 +3146,7 @@
         }
       ],
       "get": {
-        "summary": "",
+        "summary": "GET a single user by samaccountname",
         "operationId": "get-ad-samaccountname",
         "responses": {
           "200": {
@@ -441,6 +3154,129 @@
             "schema": {
               "description": "",
               "type": "object",
+              "x-examples": {
+                "example-1": {
+                  "message": "Users retrieved successfully",
+                  "users": {
+                    "0": "objectclass",
+                    "1": "cn",
+                    "2": "distinguishedname",
+                    "3": "instancetype",
+                    "4": "whencreated",
+                    "5": "whenchanged",
+                    "6": "usncreated",
+                    "7": "memberof",
+                    "8": "usnchanged",
+                    "9": "name",
+                    "10": "objectguid",
+                    "11": "useraccountcontrol",
+                    "12": "badpwdcount",
+                    "13": "codepage",
+                    "14": "countrycode",
+                    "15": "badpasswordtime",
+                    "16": "lastlogoff",
+                    "17": "lastlogon",
+                    "18": "pwdlastset",
+                    "19": "primarygroupid",
+                    "20": "objectsid",
+                    "21": "admincount",
+                    "22": "accountexpires",
+                    "23": "logoncount",
+                    "24": "samaccountname",
+                    "25": "samaccounttype",
+                    "26": "objectcategory",
+                    "27": "dscorepropagationdata",
+                    "28": "lastlogontimestamp",
+                    "objectclass": [
+                      "top",
+                      "person",
+                      "organizationalPerson",
+                      "user"
+                    ],
+                    "cn": [
+                      "admin"
+                    ],
+                    "distinguishedname": [
+                      "CN=admin,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "instancetype": [
+                      "4"
+                    ],
+                    "whencreated": [
+                      "20210820113403.0Z"
+                    ],
+                    "whenchanged": [
+                      "20210820114313.0Z"
+                    ],
+                    "usncreated": [
+                      "12831"
+                    ],
+                    "memberof": [
+                      "CN=Domain Admins,CN=Users,DC=uplift,DC=local"
+                    ],
+                    "usnchanged": [
+                      "13025"
+                    ],
+                    "name": [
+                      "admin"
+                    ],
+                    "objectguid": "00886987-2c4f-42a5-8957-27dca08141d6",
+                    "useraccountcontrol": [
+                      "512"
+                    ],
+                    "badpwdcount": [
+                      "0"
+                    ],
+                    "codepage": [
+                      "0"
+                    ],
+                    "countrycode": [
+                      "0"
+                    ],
+                    "badpasswordtime": [
+                      "0"
+                    ],
+                    "lastlogoff": [
+                      "0"
+                    ],
+                    "lastlogon": [
+                      "0"
+                    ],
+                    "pwdlastset": [
+                      "132739328433481002"
+                    ],
+                    "primarygroupid": [
+                      "513"
+                    ],
+                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1105",
+                    "admincount": [
+                      "1"
+                    ],
+                    "accountexpires": [
+                      "9223372036854775807"
+                    ],
+                    "logoncount": [
+                      "0"
+                    ],
+                    "samaccountname": [
+                      "admin"
+                    ],
+                    "samaccounttype": [
+                      "805306368"
+                    ],
+                    "objectcategory": [
+                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
+                    ],
+                    "dscorepropagationdata": [
+                      "20210820114313.0Z",
+                      "16010101000000.0Z"
+                    ],
+                    "lastlogontimestamp": [
+                      "132739328435971893"
+                    ]
+                  }
+                }
+              },
               "properties": {
                 "message": {
                   "type": "string",
@@ -568,61 +3404,61 @@
                     "objectclass": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "cn": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "distinguishedname": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "instancetype": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "whencreated": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "whenchanged": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "usncreated": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "memberof": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "usnchanged": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "name": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "objectguid": {
@@ -632,55 +3468,55 @@
                     "useraccountcontrol": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "badpwdcount": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "codepage": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "countrycode": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "badpasswordtime": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "lastlogoff": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "lastlogon": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "pwdlastset": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "primarygroupid": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "objectsid": {
@@ -690,238 +3526,51 @@
                     "admincount": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "accountexpires": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "logoncount": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "samaccountname": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "samaccounttype": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "objectcategory": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "dscorepropagationdata": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     },
                     "lastlogontimestamp": {
                       "type": "array",
                       "items": {
-                        "properties": {}
+                        "type": "object"
                       }
                     }
-                  },
-                  "required": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6",
-                    "7",
-                    "8",
-                    "9",
-                    "10",
-                    "11",
-                    "12",
-                    "13",
-                    "14",
-                    "15",
-                    "16",
-                    "17",
-                    "18",
-                    "19",
-                    "20",
-                    "21",
-                    "22",
-                    "23",
-                    "24",
-                    "25",
-                    "26",
-                    "27",
-                    "28",
-                    "objectclass",
-                    "cn",
-                    "distinguishedname",
-                    "instancetype",
-                    "whencreated",
-                    "whenchanged",
-                    "usncreated",
-                    "memberof",
-                    "usnchanged",
-                    "name",
-                    "objectguid",
-                    "useraccountcontrol",
-                    "badpwdcount",
-                    "codepage",
-                    "countrycode",
-                    "badpasswordtime",
-                    "lastlogoff",
-                    "lastlogon",
-                    "pwdlastset",
-                    "primarygroupid",
-                    "objectsid",
-                    "admincount",
-                    "accountexpires",
-                    "logoncount",
-                    "samaccountname",
-                    "samaccounttype",
-                    "objectcategory",
-                    "dscorepropagationdata",
-                    "lastlogontimestamp"
-                  ]
-                }
-              },
-              "required": [
-                "message",
-                "users"
-              ],
-              "x-examples": {
-                "example-1": {
-                  "message": "Users retrieved successfully",
-                  "users": {
-                    "0": "objectclass",
-                    "1": "cn",
-                    "2": "distinguishedname",
-                    "3": "instancetype",
-                    "4": "whencreated",
-                    "5": "whenchanged",
-                    "6": "usncreated",
-                    "7": "memberof",
-                    "8": "usnchanged",
-                    "9": "name",
-                    "10": "objectguid",
-                    "11": "useraccountcontrol",
-                    "12": "badpwdcount",
-                    "13": "codepage",
-                    "14": "countrycode",
-                    "15": "badpasswordtime",
-                    "16": "lastlogoff",
-                    "17": "lastlogon",
-                    "18": "pwdlastset",
-                    "19": "primarygroupid",
-                    "20": "objectsid",
-                    "21": "admincount",
-                    "22": "accountexpires",
-                    "23": "logoncount",
-                    "24": "samaccountname",
-                    "25": "samaccounttype",
-                    "26": "objectcategory",
-                    "27": "dscorepropagationdata",
-                    "28": "lastlogontimestamp",
-                    "objectclass": [
-                      "top",
-                      "person",
-                      "organizationalPerson",
-                      "user"
-                    ],
-                    "cn": [
-                      "admin"
-                    ],
-                    "distinguishedname": [
-                      "CN=admin,CN=Users,DC=uplift,DC=local"
-                    ],
-                    "instancetype": [
-                      "4"
-                    ],
-                    "whencreated": [
-                      "20210820113403.0Z"
-                    ],
-                    "whenchanged": [
-                      "20210820114313.0Z"
-                    ],
-                    "usncreated": [
-                      "12831"
-                    ],
-                    "memberof": [
-                      "CN=Domain Admins,CN=Users,DC=uplift,DC=local"
-                    ],
-                    "usnchanged": [
-                      "13025"
-                    ],
-                    "name": [
-                      "admin"
-                    ],
-                    "objectguid": "00886987-2c4f-42a5-8957-27dca08141d6",
-                    "useraccountcontrol": [
-                      "512"
-                    ],
-                    "badpwdcount": [
-                      "0"
-                    ],
-                    "codepage": [
-                      "0"
-                    ],
-                    "countrycode": [
-                      "0"
-                    ],
-                    "badpasswordtime": [
-                      "0"
-                    ],
-                    "lastlogoff": [
-                      "0"
-                    ],
-                    "lastlogon": [
-                      "0"
-                    ],
-                    "pwdlastset": [
-                      "132739328433481002"
-                    ],
-                    "primarygroupid": [
-                      "513"
-                    ],
-                    "objectsid": "S-1-5-21-3543265425-1345166158-814452509-1105",
-                    "admincount": [
-                      "1"
-                    ],
-                    "accountexpires": [
-                      "9223372036854775807"
-                    ],
-                    "logoncount": [
-                      "0"
-                    ],
-                    "samaccountname": [
-                      "admin"
-                    ],
-                    "samaccounttype": [
-                      "805306368"
-                    ],
-                    "objectcategory": [
-                      "CN=Person,CN=Schema,CN=Configuration,DC=uplift,DC=local"
-                    ],
-                    "dscorepropagationdata": [
-                      "20210820114313.0Z",
-                      "16010101000000.0Z"
-                    ],
-                    "lastlogontimestamp": [
-                      "132739328435971893"
-                    ]
                   }
                 }
               }
@@ -1056,15 +3705,14 @@
             "type": "string",
             "in": "header",
             "name": "Content-Type",
-            "description": "application/json"
+            "description": "application/json",
+            "required": true
           }
         ],
         "description": "Listar dados de um utilizador da Active Directory identificado por samaccountname",
         "security": [
           {
-            "JWT": [
-              "ad/{samaccountname}"
-            ]
+            "CAPI-JWT": []
           }
         ]
       },
@@ -1647,21 +4295,24 @@
             "type": "string",
             "in": "header",
             "description": "application/json",
-            "name": "Content-Type"
+            "name": "Content-Type",
+            "required": true
+          }
+        ],
+        "security": [
+          {
+            "CAPI-JWT": []
           }
         ]
       }
     }
   },
   "securityDefinitions": {
-    "JWT": {
-      "authorizationUrl": "https://capi.local:8080/auth/login",
-      "flow": "implicit",
-      "scopes": {
-        "ad": "Listar todos os utilizadores da AD",
-        "ad/{samaccountname}": "Listar a informação de um utilizador da AD"
-      },
-      "type": "oauth2"
+    "CAPI-JWT": {
+      "name": "Authorization",
+      "type": "apiKey",
+      "in": "header",
+      "description": "Token que é enviado na resposta do login\n"
     }
   },
   "tags": [
