@@ -3,7 +3,7 @@
 ![Capi Logo](http://10.4.0.59/capi/Documentation/Assets/img/capi.png "Capi Logo")
 
 ## O que é a CAPI?
-A Central API (CAPI) é uma API da Universidade Aberta que permiter acedar a vários serviços directamente através de pedidos REST.
+A Central API (CAPI) é uma API da Universidade Aberta que permiter acedar à informação de vários serviços directamente através de pedidos REST.
 
 Neste momento estão disponiveis as paths para registo e login de clientes e após autenticação CRUD para Active Directory.
 
