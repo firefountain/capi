@@ -3,7 +3,7 @@
   "info": {
     "title": "CAPI - Central API UAb",
     "x-logo": {
-      "url": "https://redocly.github.io/redoc/petstore-logo.png",
+      "url": "http://10.4.0.59/capi/Documentation/Assets/img/capi.png",
       "backgroundColor": "#FFFFFF",
       "altText": "Petstore logo"
     },    
