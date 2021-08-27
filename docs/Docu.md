@@ -48,9 +48,12 @@ HMACSHA256
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6InRlc3RlMSIsImlhdCI6MTYyOTkwNjc1MiwiZXhwIjoxNjI5OTEwMzUyfQ.Vskrf57VjUpEvlfLK3dMIlkAIXCcNDTIdbD3n_YOlq8
 ```
 ### Flow de autenticação e pedido
-
 ![Capi flow](http://10.4.0.59/capi/Documentation/Assets/img/flow.png "Capi flow")
-
+1. **Autenticação:** Processo de autenticação de cliente na CAPI. Login e retorno de Bearer Token para usar no acesso a restantes pedidos.
+2. **Duração de token:** Cliente verifica e guarda a duração do token que recebeu após login.
+3. **Pedido de informação:** Cliente efectua pedido de informação a CAPI incluíndo o Bearer Token
+4. **Token com duração válida:** Validação por parte do cliente que o token ainda é válido.
+5. **Token com duração inválida:** Token já não se encontra válido. Cliente terá de voltar a autenticar-se.
 
 >CONTACT
 >
