@@ -197,7 +197,10 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "Autenticação"
+        ]
       }
     },
     "/auth/login": {
@@ -366,7 +369,10 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "Autenticação"
+        ]
       }
     },
     "/ad": {
@@ -2977,6 +2983,9 @@
           {
             "CAPI-JWT": []
           }
+        ],
+        "tags": [
+          "Active Directory"
         ]
       },
       "post": {
@@ -3138,6 +3147,9 @@
           {
             "CAPI-JWT": []
           }
+        ],
+        "tags": [
+          "Active Directory"
         ]
       }
     },
@@ -4354,11 +4366,6 @@
       "description": "Token que é enviado na resposta do login\n"
     }
   },
-  "tags": [
-    {
-      "name": "Active Directory"
-    }
-  ],
   "produces": [
     "application/json"
   ],
