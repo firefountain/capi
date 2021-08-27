@@ -47,6 +47,7 @@ HMACSHA256
  ```json
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6InRlc3RlMSIsImlhdCI6MTYyOTkwNjc1MiwiZXhwIjoxNjI5OTEwMzUyfQ.Vskrf57VjUpEvlfLK3dMIlkAIXCcNDTIdbD3n_YOlq8
 ```
+### Flow de autenticação e pedido
 
 ![Capi flow](http://10.4.0.59/capi/Documentation/Assets/img/flow.png "Capi flow")
 
