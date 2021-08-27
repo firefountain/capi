@@ -3185,6 +3185,9 @@
             "name": "Content-Type",
             "required": true
           }
+        ],
+        "tags": [
+          "Active Directory"
         ]
       },
       "parameters": [
@@ -3765,6 +3768,9 @@
           {
             "CAPI-JWT": []
           }
+        ],
+        "tags": [
+          "Active Directory"
         ]
       },
       "put": {
@@ -4354,6 +4360,9 @@
           {
             "CAPI-JWT": []
           }
+        ],
+        "tags": [
+          "Active Directory"
         ]
       }
     }
@@ -4414,5 +4423,15 @@
       }
     }
   },
-  "value": "{\n  \"method\": \"get\",\n  \"url\": \"http://capi.local:8080/auth/login\",\n  \"headers\": {\n    \"Content-Type\": \"application/json\"\n  },\n  \"body\": {\n    \"client_name\": \"string\",\n    \"password\": \"string\"\n  }\n}"
+  "value": "{\n  \"method\": \"get\",\n  \"url\": \"http://capi.local:8080/auth/login\",\n  \"headers\": {\n    \"Content-Type\": \"application/json\"\n  },\n  \"body\": {\n    \"client_name\": \"string\",\n    \"password\": \"string\"\n  }\n}",
+  "tags": [
+    {
+      "name": "Active Directory",
+      "description": "Pontos de acesso para operações na Active Directory"
+    },
+    {
+      "name": "Autenticação",
+      "description": "Pontos de acesso para Autenticação"      
+    }
+  ]
 }
