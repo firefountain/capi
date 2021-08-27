@@ -1,4 +1,4 @@
-# Description of CAPI RESTful API.
+# Descrição da CAPI RESTful API.
 
 ![Capi Logo](http://10.4.0.59/capi/Documentation/Assets/img/capi.png "Capi Logo")
 
@@ -9,7 +9,7 @@ Neste momento estão disponiveis as paths para registo e login de clientes e ap�
 
 Esta API só permite aceder aos serviços após o cliente estar registado e autenticado na mesma. 
 
-### Autenticação
+## Processo de autenticação
 A CAPI utiliza autenticação via JSON Web Token (JWT).
 
 JWT é um padrão aberto documentado pelo [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519 "RFC 7519"), que viabiliza a transferência de informações e garante a sua autenticidade.
@@ -47,6 +47,8 @@ HMACSHA256
  ```json
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6InRlc3RlMSIsImlhdCI6MTYyOTkwNjc1MiwiZXhwIjoxNjI5OTEwMzUyfQ.Vskrf57VjUpEvlfLK3dMIlkAIXCcNDTIdbD3n_YOlq8
 ```
+
+![Capi flow](http://10.4.0.59/capi/Documentation/Assets/img/flow.png "Capi flow")
 
 
 >CONTACT
