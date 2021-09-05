@@ -109,7 +109,7 @@ Desta maneira a CAPI, tem sempre toda a informação agregada actualizada e disp
 
 Do lado da CAPI a informação é agregada por leitura da DB do SIGES que tem a informação sobre UCs e Cursos e consulidada com informação proveninente do GI (*Guia Informativo*)
 
-##CAPI <a name="capi"></a>
+## CAPI <a name="capi"></a>
 Como é possível de verificar no gráfico abaixo, a ligação com o **SIGES** é efectuado através da **Base de Dados Oracle**
 
 ![Capi-Guia-Informativo-SIGES](http://10.4.0.59/capi/Documentation/Assets/img/capi-GI-siges.png "Capi Guia informativo SIGES")
@@ -213,7 +213,7 @@ class Siges extends Model
 > Atenção que este definição de tabela é apenas um exemplo que permite montar CRUD rápidamente - **não será usado no caso do modelo de siges**
 
 
-#####Operações necessárias já identificadas para o model SIGES: 
+##### Operações necessárias já identificadas para o model SIGES: 
 
 * **GET**:
 	* **getUCs** - model que irá pingar a DB do SIGES e colectar toda a informação referente a UCs
@@ -292,7 +292,7 @@ class Siges extends BaseController
 ```
 > De salientar a utilização de ambos os models
 
-####Métodos necessárias já identificadas para o controlador SIGES:
+#### Métodos necessárias já identificadas para o controlador SIGES:
 * **syncUCs** - método que irá recolher informação de **UCs** ao model [**SIGES**](#sigesmodel)  e transpor informação para o model [**capiSIGES**](#sigesmodel) 
 * **syncCursos** - método que irá recolher informação de **Cursos** ao model [**SIGES**](#sigesmodel) e transpor informação para o model [**capiSIGES**](#sigesmodel)
 
