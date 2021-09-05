@@ -69,6 +69,21 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6InRlc3RlMSIsImlhdCI6MTY
 3. **Pedido de informação:** Cliente efectua pedido de informação a CAPI incluíndo o Bearer Token
 
 
+
+```json
+database.default.hostname = localhost
+database.default.database = capi
+database.default.username = root
+database.default.password = root
+database.default.DBDriver = MySQLi
+
+database.siges.hostname = localhost
+database.siges.database = siges
+database.siges.username = admin
+database.siges.password = Admin@123
+database.siges.DBDriver = MySQLi
+```
+
 > CONTACT
 >
 > NAME: CAPI
