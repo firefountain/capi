@@ -1,5 +1,7 @@
 # Guia Informativo
 
+![Capi Logo](http://10.4.0.59/capi/Documentation/Assets/img/capi.png "Capi Logo")
+
 # Index
 1. [Intro](#intro)
 2. [Wordpress](#wordpress)
