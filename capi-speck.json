@@ -4701,7 +4701,23 @@
     {
       "name": "Autenticação",
       "description": "Pontos de acesso para Autenticação"
-    }
+    },
+    {
+      "name": "cursos",
+      "description": "Totalidade de informação referente a cursos. Consume/Produz todos os cursos e respectiva informação disponível em db",
+      "externalDocs": {
+        "description": "Documentação",
+        "url": "http://swagger.io"
+      }
+    },
+    {
+      "name": "ucs",
+      "description": "Totalidade de informação referente a Unidades curriculares",
+      "externalDocs": {
+        "description": "Documentação",
+        "url": "http://swagger.io"
+      }
+    }    
   ],
   "responses": {
     "Error": {
