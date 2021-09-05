@@ -4417,7 +4417,225 @@
           "Active Directory"
         ]
       }
-    }
+    },
+    "/cursos": {
+      "get": {
+        "tags": [
+          "cursos"
+        ],
+        "summary": "Devolve cursos activos",
+        "description": "Devolve todos os cursos activos para o ano corrente",
+        "operationId": "getCursos",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Curso"
+            }
+          },
+          "400": {
+            "description": "unsuccessful operation"
+          }
+        },
+        "security": []
+      },
+      "post": {
+        "tags": [
+          "cursos"
+        ],
+        "summary": "Adiciona um novo curso a DBI",
+        "description": "ADICIONA um novo a DBI com o formato necessário",
+        "operationId": "addCurso",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Objecto com os dados completos do curso a actualizar",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Curso"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "405": {
+            "description": "Invalid input"
+          }
+        },
+        "security": []
+      },
+      "put": {
+        "tags": [
+          "cursos"
+        ],
+        "summary": "Actualizar um curso existente com novos dados",
+        "description": "ACTUALIZA um curso na DBI com novos dados",
+        "operationId": "updatePet",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Pet object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Curso"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Pet not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        },
+        "security": []
+      }
+    },
+    "/cursos/{cd_curso}": {
+      "get": {
+        "tags": [
+          "cursos"
+        ],
+        "summary": "Procura curso por ID",
+        "description": "Procura e responde com informação sobre o curso com o ID no parâmetro",
+        "operationId": "getCursoById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "cd_curso",
+            "in": "path",
+            "description": "ID do curso que se quer retornado",
+            "required": true,
+            "type": "integer",
+            "maximum": 10,
+            "minimum": 1,
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Curso"
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Curso not found"
+          }
+        },
+        "security": []
+      }
+    },
+    "/cursos/findByStatus": {
+      "get": {
+        "tags": [
+          "cursos"
+        ],
+        "summary": "Encontrar Cursos por activo/inactivo",
+        "description": "Multiple status values can be provided with comma separated strings",
+        "operationId": "findCursosByStatus",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "description": "Status values that need to be considered for filter",
+            "required": true,
+            "type": "string",
+            "items": {
+              "type": "string",
+              "enum": [
+                "active",
+                "inactive"
+              ],
+              "default": "active"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Curso"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": []
+      }
+    },
+    "/cursos/findByYear": {
+      "get": {
+        "tags": [
+          "cursos"
+        ],
+        "summary": "Encontrar Cursos por ano",
+        "description": "Multiplos Cursos podem ser requisitados separados por virgula",
+        "operationId": "findCursosByYear",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ano",
+            "in": "query",
+            "description": "Status values that need to be considered for filter",
+            "required": true,
+            "type": "number",
+            "items": {
+              "type": "number",
+              "default": 2021
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Curso"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": []
+      }
+    }    
   },
   "securityDefinitions": {
     "CAPI-JWT": {
