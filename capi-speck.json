@@ -5155,7 +5155,7 @@
   ],
   "responses": {
     "Error": {
-      "description": "Example response",
+      "description": "Error Response Model\n",
       "content": {
         "application/json": {
           "schema": {
@@ -5165,6 +5165,49 @@
               }
             }
           }
+        }
+      },
+      "schema": {
+        "description": "",
+        "type": "object",
+        "x-examples": {
+          "example-1": {
+            "message": "User created successfully",
+            "response": {},
+            "error": "Error message details"
+          }
+        },
+        "properties": {
+          "message": {
+            "type": "string",
+            "minLength": 1
+          },
+          "response": {
+            "type": "object",
+            "properties": {
+              "": {
+                "type": "string"
+              }
+            }
+          },
+          "error": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "message",
+          "response",
+          "error"
+        ]
+      },
+      "examples": {
+        "Example": {
+          "message": "There was an issue updating this user.",
+          "response": {
+            "": "string"
+          },
+          "error": "We could not update this user, user is locked"
         }
       }
     }
