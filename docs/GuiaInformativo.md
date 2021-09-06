@@ -8,7 +8,9 @@
 3. [CAPI](#capi)
 	* [SIGES Model](#sigesmodel) 
 	* [CAPI SIGES Model](#capisigesmodel)
-	* [CAPI SIGES controller](#capisigescontroler) 
+	* [CAPI SIGES controller](#capisigescontroler)
+	* [CAPI GI API](#capigi) 
+		* [CAPI GI Controller](#capigicontroller)  
 
 ## Intro <a name="intro"></a>
 
@@ -298,5 +300,40 @@ class Siges extends BaseController
 
 
 ![Capi-GI-arc](http://10.4.0.59/capi/Documentation/Assets/img/capi-GI-siges-arc.png "CAPI Guia informativo SIGES ARC")
+
+Com este controlador podemos agregar e consolidar a informação e preparar a mesma para consumo
+
+
+## API e Consumo <a name="capigi"></a>
+
+Para que esta informação possa ser consumida por terceiros é necessário implementar um novo controller que terá os verbos e respectivos métodos. 
+Este mesmo controller terá também de ter um novo model que recupera a informação da **CAPI DB**
+
+#### CAPI GI controler <a name="capigicontroller"></a>
+
+Este controller é responsável por centralizar a informação que poderá ser consumida por terceiros, como o Guia Informativo. 
+
+##### Métodos necessárias já identificadas para o controlador CAPIGI:
+* **GET**
+	* **getUCs** - método que irá listar toda a informação referente a todas as **UC** que existem disponíveis em [**CAPI GI**](#capigimodel)
+	* **getUC** - método que irá listar toda a informação referente a **uma única UC** que existe disponível em [**CAPI GI**](#capigimodel)
+	* **getCursos** - método que irá recolher informação de todos os **Cursos** que existem disponíveis em [**CAPI GI**](#capigimodel)
+	* **getCurso** - método que irá recolher informação referente a **um único CURSO** que existe disponível em [**CAPI GI**](#capigimodel)
+* **PUT**
+	* **updateUC** - método que permite actualizar a informação descritiva (*metadados*) de uma **determinada UC**
+	* **updateCurso** - método que permite actualizar a informação descritiva (*metadados*) de uma **determinado CURSO**
+
+#### CAPI GI model <a name="capigimodel"></a>
+
+Para que a informação possa ser disponibilizada pelo controller é necessária a implementação de um model para gestão da informação na **CAPI DB**
+
+##### Métodos necessárias já identificadas para o model CAPIGI:
+* **getUCs** - método que irá selecionar IDs/nomes (*será que é necessário mais alguma coisa?*) de **UCs** para possibilitar consulta posteriormente
+* **getUC** - método que irá selecionar toda a informação referente a **uma única UC** 
+* **getCursos** - método que irá selecionar IDs/nomes (*será que é necessário mais alguma coisa?*) de **CURSOS** para possibilitar consulta posteriormente
+* **getCurso** - método que irá selecionar toda a informação referente a **um únicao CURSO** 
+* **updateUC** - método que permite actualizar a informação descritiva (*metadados*) de uma **determinada UC**
+* **updateCurso** - método que permite actualizar a informação descritiva (*metadados*) de uma **determinado CURSO**
  
 
+![Capi-GI-arc2](http://10.4.0.59/capi/Documentation/Assets/img/capi-GI-siges-arc2.png "CAPI Guia informativo SIGES ARC")
