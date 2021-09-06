@@ -4444,9 +4444,6 @@
         ]
       },
       "post": {
-        "tags": [
-          "cursos"
-        ],
         "summary": "Adiciona um novo curso a DBI",
         "description": "ADICIONA um novo a DBI com o formato necessário",
         "operationId": "addCurso",
@@ -4473,12 +4470,12 @@
             "description": "Invalid input"
           }
         },
-        "security": []
+        "security": [],
+        "tags": [
+          "Cursos"
+        ]
       },
       "put": {
-        "tags": [
-          "cursos"
-        ],
         "summary": "Actualizar um curso existente com novos dados",
         "description": "ACTUALIZA um curso na DBI com novos dados",
         "operationId": "updatePet",
@@ -4511,7 +4508,10 @@
             "description": "Validation exception"
           }
         },
-        "security": []
+        "security": [],
+        "tags": [
+          "Cursos"
+        ]
       }
     },
     "/cursos/{cd_curso}": {
