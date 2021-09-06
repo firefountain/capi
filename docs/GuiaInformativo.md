@@ -1,6 +1,8 @@
-# Guia Informativo
+
 
 ![Capi Logo](http://10.4.0.59/capi/Documentation/Assets/img/capi.png "Capi Logo")
+
+# Guia Informativo
 
 # Index
 1. [Intro](#intro)
@@ -16,7 +18,7 @@
 
 > **Pressupostos**
 >
->O novo Guia de Cursos vai ter como base uma plataform Wordpress com um tema desenvolvido de base( *a verificar* ) e um plugin que vai permitir a integração dos contéudos com a CAPI.
+>O novo Guia Informativo vai ter como base uma plataform Wordpress com um tema desenvolvido de base( *a verificar* ) e um plugin que vai permitir a integração dos contéudos com a CAPI.
 >
 >O plugin terá de ter em conta que existem dados que só existem do lado do Guia. Sendo assim o Guia passa a ser o **Owner** da informação **NÃO TÉCNICA / Caracterização** de Cursos (metadados)
 
@@ -337,3 +339,4 @@ Para que a informação possa ser disponibilizada pelo controller é necessária
  
 
 ![Capi-GI-arc2](http://10.4.0.59/capi/Documentation/Assets/img/capi-GI-siges-arc2.png "CAPI Guia informativo SIGES ARC")
+
