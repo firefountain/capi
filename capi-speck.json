@@ -14,7 +14,7 @@
       "email": "nelson.carvalho@uab.pt"
     }
   },
-  "host": "capi.local:8080",
+  "host": "capi.local:80",
   "schemes": [
     "http"
   ],
@@ -4420,9 +4420,6 @@
     },
     "/cursos": {
       "get": {
-        "tags": [
-          "cursos"
-        ],
         "summary": "Devolve cursos activos",
         "description": "Devolve todos os cursos activos para o ano corrente",
         "operationId": "getCursos",
@@ -4441,7 +4438,10 @@
             "description": "unsuccessful operation"
           }
         },
-        "security": []
+        "security": [],
+        "tags": [
+          "Cursos"
+        ]
       },
       "post": {
         "tags": [
@@ -4516,9 +4516,6 @@
     },
     "/cursos/{cd_curso}": {
       "get": {
-        "tags": [
-          "cursos"
-        ],
         "summary": "Procura curso por ID",
         "description": "Procura e responde com informação sobre o curso com o ID no parâmetro",
         "operationId": "getCursoById",
@@ -4551,14 +4548,14 @@
             "description": "Curso not found"
           }
         },
-        "security": []
+        "security": [],
+        "tags": [
+          "Cursos"
+        ]
       }
     },
     "/cursos/findByStatus": {
       "get": {
-        "tags": [
-          "cursos"
-        ],
         "summary": "Encontrar Cursos por activo/inactivo",
         "description": "Multiple status values can be provided with comma separated strings",
         "operationId": "findCursosByStatus",
@@ -4594,14 +4591,14 @@
             "description": "Invalid status value"
           }
         },
-        "security": []
+        "security": [],
+        "tags": [
+          "Cursos"
+        ]
       }
     },
     "/cursos/findByYear": {
       "get": {
-        "tags": [
-          "cursos"
-        ],
         "summary": "Encontrar Cursos por ano",
         "description": "Multiplos Cursos podem ser requisitados separados por virgula",
         "operationId": "findCursosByYear",
@@ -4633,7 +4630,10 @@
             "description": "Invalid status value"
           }
         },
-        "security": []
+        "security": [],
+        "tags": [
+          "Cursos"
+        ]
       }
     }
   },
@@ -5137,7 +5137,7 @@
       "description": "Pontos de acesso para Autenticação"
     },
     {
-      "name": "cursos",
+      "name": "Cursos",
       "description": "Totalidade de informação referente a cursos. Consume/Produz todos os cursos e respectiva informação disponível em db",
       "externalDocs": {
         "description": "Documentação",

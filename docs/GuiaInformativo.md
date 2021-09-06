@@ -335,8 +335,35 @@ Para que a informação possa ser disponibilizada pelo controller é necessária
 * **getCursos** - método que irá selecionar IDs/nomes (*será que é necessário mais alguma coisa?*) de **CURSOS** para possibilitar consulta posteriormente
 * **getCurso** - método que irá selecionar toda a informação referente a **um únicao CURSO** 
 * **updateUC** - método que permite actualizar a informação descritiva (*metadados*) de uma **determinada UC**
-* **updateCurso** - método que permite actualizar a informação descritiva (*metadados*) de uma **determinado CURSO**
- 
+* **updateCurso** - método que permite actualizar a informação descritiva (*metadados*) de um **determinado CURSO**
 
+ 
 ![Capi-GI-arc2](http://10.4.0.59/capi/Documentation/Assets/img/capi-GI-siges-arc2.png "CAPI Guia informativo SIGES ARC")
+
+##### Rotas para o controller
+
+```json
+/*
+ * --------------------------------------------------------------------
+ * Guia Informativo Routes Definitions
+ * --------------------------------------------------------------------
+ */
+
+$routes->group('guia', function($routes)
+{
+    // GETS
+    // UCs
+    $routes->get('ucs', 'capigi::getUCs');
+    $routes->get('ucs/(:num)', 'capigi::getUC/$1');
+    // Cursos
+    $routes->get('cursos', 'capigi::getCursos');
+    $routes->get('cursos/(:num)', 'capigi::getCurso/$1');
+
+    //PUTS
+    $routes->put('ucs/(:num)', 'capigi::updateUC/$1');
+    $routes->put('cursos/(:num)', 'capigi::updateCurso/$1');
+});
+```
+![Capi-GI-arc3](http://10.4.0.59/capi/Documentation/Assets/img/capi-GI-siges-arc3.png "CAPI Guia informativo SIGES ARC")
+
 
