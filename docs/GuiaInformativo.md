@@ -107,6 +107,10 @@ Informação:
 	
 Esta informação é gérida através do backoffice existente na instalação de wordpress do Guia Informativo e actualizada na CAPI cada vez que a mesma é alterada no wordpress.
 
+
+![Capi WP](http://10.4.0.59/capi/Documentation/Assets/img/capi-wp1.png "Capi wp")
+
+
 Desta maneira a CAPI, tem sempre toda a informação agregada actualizada e disponível para ser consumidada por entidades terceiras.
 
 ![Capi Guia Informativo](http://10.4.0.59/capi/Documentation/Assets/img/capi-GI.png "Capi Guia informativo")
