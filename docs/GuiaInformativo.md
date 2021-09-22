@@ -7,8 +7,8 @@
 # Index
 1. [Intro](#intro)
 2. [Wordpress](#wordpress)
-  * [Plugin Wordpress](#wpplugin)
-  * [CRON](#wpcron)
+    * [Plugin Wordpress](#wpplugin)
+    * [CRON](#wpcron)
 3. [CAPI](#capi)
 	* [SIGES Model](#sigesmodel) 
 	* [CAPI SIGES Model](#capisigesmodel)
