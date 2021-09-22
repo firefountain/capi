@@ -121,7 +121,7 @@ Desta maneira a CAPI, tem sempre toda a informação agregada actualizada e disp
 ### CRON <a name="wpcron"></a>
 Para sincronizar informação novamente com o Guia Informativo, o plugin vais disponibilizar um processo CRON. 
 
-Este processo CRON, vai utilizar os pontos **getUCs** e **getCursos** para sincronizar informação já existente no Wordpress usando como chaves primárias cd_UC e cd_Curso.
+Este processo CRON, vai utilizar os pontos **getUCs** e **getCursos** para sincronizar informação já existente no Wordpress usando como chaves primárias **cd_UC** e **cd_Curso** e tem de ter em conta a **data de actualização**
 
 O processo CRON não pode usar os wp_id porque os mesmo não são estáticos e no processo de sincronização os mesmo vão ser alterados. Ou seja, o processo de sincronização tem de usar como chave o **cd_UC** e **cd_Curso**. Desta maneira não existe a necessidade de guardar os wp_ids.
 
