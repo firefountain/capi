@@ -6,7 +6,7 @@
 
 # Index
 1. [Intro](#intro)
-2. [Wordpress](#wordpress)
+2. [Wordpress](#custom-id)
     * [Plugin Wordpress](#wpplugin)
     * [CRON](#wpcron)
 3. [CAPI](#capi)
@@ -36,7 +36,7 @@ A CAPI, terá toda a informação sobre os cursos agregada e actulizada em (temo
 
 
 
-## Wordpress <a name="wordpress"></a>
+## Wordpress <a name="wordpress"></a>{#custom-id}
 ### Informação que será gerida directamente no Wordpress
 
 A informação resultante da gestão de cursos e caracterização dos mesmos está guardada em custom post type metadada.
