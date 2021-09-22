@@ -36,7 +36,7 @@ A CAPI, terá toda a informação sobre os cursos agregada e actulizada em (temo
 
 
 
-## Wordpress{#custom-id} <a name="wordpress"></a>
+## Wordpress <a name="wordpress"></a>
 ### Informação que será gerida directamente no Wordpress
 
 A informação resultante da gestão de cursos e caracterização dos mesmos está guardada em custom post type metadada.
@@ -118,7 +118,7 @@ Desta maneira a CAPI, tem sempre toda a informação agregada actualizada e disp
 
 ![Capi WP](http://10.4.0.59/capi/Documentation/Assets/img/capi-wp2.png "Capi wp")
 
-### CRON <a name="wpcron"></a>
+### CRON<a name="wpcron"></a>
 Para sincronizar informação novamente com o Guia Informativo, o plugin vais disponibilizar um processo CRON. 
 
 Este processo CRON, vai utilizar os pontos **getUCs** e **getCursos** para sincronizar informação já existente no Wordpress usando como chaves primárias **cd_UC** e **cd_Curso** e tem de ter em conta a **data de actualização**
