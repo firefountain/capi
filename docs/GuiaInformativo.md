@@ -107,7 +107,7 @@ Informação:
 	* Contactos
 	* Palavras-Chave	 
 
-## Plugin Wordpress <a name="wpplugin"></a>
+### Plugin Wordpress <a name="wpplugin"></a>
 Esta informação é gérida através do backoffice existente na instalação de wordpress do Guia Informativo e actualizada na CAPI cada vez que a mesma é alterada no wordpress.
 
 ![Capi WP](http://10.4.0.59/capi/Documentation/Assets/img/capi-wp3.png "Capi wp")
