@@ -36,7 +36,7 @@ A CAPI, terá toda a informação sobre os cursos agregada e actulizada em (temo
 
 
 
-## Wordpress <a name="wordpress"></a>{#custom-id}
+## Wordpress{#custom-id} <a name="wordpress"></a>
 ### Informação que será gerida directamente no Wordpress
 
 A informação resultante da gestão de cursos e caracterização dos mesmos está guardada em custom post type metadada.
