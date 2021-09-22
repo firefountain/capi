@@ -120,6 +120,43 @@ Para sincronizar informação novamente com o Guia Informativo, o plugin vais di
 
 Este processo CRON, vai utilizar os pontos **getUCs** e **getCursos** para sincronizar informação já existente no Wordpress usando como chaves primárias cd_UC e cd_Curso.
 
+O processo CRON não pode usar os wp_id porque os mesmo não são estáticos e no processo de sincronização os mesmo vão ser alterados. Ou seja, o processo de sincronização tem de usar como chave o **cd_UC** e **cd_Curso**. Desta maneira não existe a necessidade de guardar os wp_ids.
+
+
+No processo de sincronização, o plugin tem de **apagar toda a informação que existe no WP** e recriar essa informação com a informação proveniente da CAPI.
+
+
+Exemplo:
+
+```json
+// Remove all ancient info
+$resultP = $wpdb->query($wpdb->prepare("DELETE p, pm
+                      FROM wp_posts p
+                      JOIN wp_postmeta pm
+                      ON pm.post_id = p.id
+    WHERE p.post_content = %d AND p.post_type = %s", $cd_curso, "cursos"));
+```
+
+Após a limpeza da informação já existente, a nova informação é carregada.
+
+Exemplo:
+
+```json
+$cursoDetails = array(
+  'post_title' => $curso->title,
+  'post_name' => $curso->title,
+  'post_status' => 'publish',
+  'post_type' => 'cursos',
+  'post_content' => $curso,
+  'post_date' => $curso->year . '-01' . '-01',
+);
+$publicationID = wp_insert_post($publicationDetails, true);
+```
+
+**ATENÇÃO**: Todo este processo de sincronização tem de ter em conta **apenas** Cursos/UCs que foram alterados. A CAPI tem de permitir a *filtragem* de informação de Cursos/UCs por data de alteração. 
+Apenas os Cursos/UCs que foram alterados são realmente removidos da DB. Desta maneira não existe uma necessidade de fazer updates a toda a informação.
+
+
 Este processo pode correr todos os dias ou várias vezes ao dia.
 
 
